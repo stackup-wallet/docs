@@ -1,0 +1,15 @@
+node_modules
+build
+.eslintignore
+.docusaurus
+.gitkeep
+.gitignore
+.prettierignore
+**/*.jpeg
+**/*.png
+**/*.ico
+**/*.svg
+**/*.nojekyll
+.DS_Store
+LICENSE
+yarn.lock

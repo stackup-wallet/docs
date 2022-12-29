@@ -1,0 +1,8 @@
+{
+  "label": "Introduction",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "A quick introduction to account abstraction and how it can be used to build better Web 3 user experiences."
+  }
+}

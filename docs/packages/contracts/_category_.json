@@ -1,0 +1,9 @@
+{
+  "label": "Contracts",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "🚧 Contracts",
+    "description": "Modular Solidity libraries for creating ERC-4337 compliant Wallet Contracts and Paymaster Contracts."
+  }
+}

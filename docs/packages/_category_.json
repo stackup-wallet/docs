@@ -1,0 +1,8 @@
+{
+  "label": "Packages",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Open source packages for building apps with ERC-4337."
+  }
+}
