@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "stackupfinance", // Usually your GitHub org/user name.
-  projectName: "stackup", // Usually your repo name.
+  organizationName: "stackup-wallet", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -46,6 +46,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        gtag: {
+          trackingID: process.env.GTAG_TRACKING_ID,
+          anonymizeIP: true,
         },
       }),
     ],
