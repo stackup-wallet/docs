@@ -10,7 +10,7 @@ The source documentation for all stackup packages. See [docs.stackup.sh](https:/
 
 ## Prerequisites
 
-- Node 16.14 or later
+- Node 16 or later
 - Yarn 1.22 or later
 
 ## Setup
