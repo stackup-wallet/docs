@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+image: https://i.imgur.com/FGHdPyr.png
 ---
 
 import Diagram from "../../src/components/Diagram";
@@ -7,6 +8,25 @@ import Diagram from "../../src/components/Diagram";
 # ERC-4337 Overview
 
 A quick overview of the standard for developers.
+
+<head>
+  <meta name="title" content="What is ERC-4337? | Stackup" />
+  <meta name="og:title" content="What is ERC-4337? | Stackup" />
+  <meta name="description" content="This page is an introduction to EIP-4337, the latest account abstraction proposal for smart contract wallets in the Ethereum ecosystem. Learn more here!" />
+  <meta name="og:description" content="This page is an introduction to EIP-4337, the latest account abstraction proposal for smart contract wallets in the Ethereum ecosystem. Learn more here!" />
+  <meta name="keywords" content="introduction,
+    smart contract wallet,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    stackup" />
+  <meta name="og:keywords" content="introduction,
+    smart contract wallet,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    stackup" />
+</head>
 
 :::info
 

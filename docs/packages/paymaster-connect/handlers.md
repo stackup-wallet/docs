@@ -6,6 +6,27 @@ sidebar_position: 3
 
 Functions for handling paymaster business logic.
 
+<head>
+  <meta name="title" content="How to set up custom ERC-4337 paymaster logic | Stackup" />
+  <meta name="og:title" content="How to set up custom ERC-4337 paymaster logic | Stackup" />
+  <meta name="description" content="Create custom logic for how your users pay gas on any EVM network using Paymaster Connect by Stackup. Start sponsoring gasless transactions today!" />
+  <meta name="og:description" content="Create custom logic for how your users pay gas on any EVM network using Paymaster Connect by Stackup. Start sponsoring gasless transactions today!" />
+  <meta name="keywords" content="gasless transactions,
+    sponsor Ethereum transactions,
+    pay gas fees,
+    ERC-4337 paymaster,
+    account abstraction,
+    ERC-4337,
+    EIP-4337" />
+  <meta name="og:keywords" content="gasless transactions,
+    sponsor Ethereum transactions,
+    pay gas fees,
+    ERC-4337 paymaster,
+    account abstraction,
+    ERC-4337,
+    EIP-4337" />
+</head>
+
 The `Paymaster Connect` framework allows you to manage your `Paymaster Contracts` and any fee logic you want to use for your application. All paymasters need to:
 
 1. Approve a `UserOperation`

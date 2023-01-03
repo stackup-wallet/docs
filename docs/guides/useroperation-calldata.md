@@ -6,6 +6,31 @@ sidebar_position: 4
 
 The instructions for an ERC-4337 wallet.
 
+<head>
+  <meta name="title" content="Overview of UserOperation callData in ERC-4337 | Stackup" />
+  <meta name="og:title" content="Overview of UserOperation callData in ERC-4337 | Stackup" />
+  <meta name="description" content="Learn how transaction data is sent and encoded in EIP-4337 UserOperation objects." />
+  <meta name="og:description" content="Learn how transaction data is sent and encoded in EIP-4337 UserOperation objects." />
+  <meta name="keywords" content="executeUserOp,
+    ERC-4337 callData,
+    example UserOperation,
+    UserOperation callData,
+    call data,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+  <meta name="og:keywords" content="executeUserOp,
+    ERC-4337 callData,
+    example UserOperation,
+    UserOperation callData,
+    call data,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+</head>
+
 A [`UserOperation`](../packages/client-sdk/useroperation.md#useroperation-1) has a field called `callData`. This is sent to the `sender` smart contract address during the [execution phase](../introduction/erc-4337-overview.md#entrypoint) in order to carry out the user's desired intent.
 
 ## An overview of transaction data

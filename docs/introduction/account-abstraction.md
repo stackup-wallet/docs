@@ -1,10 +1,30 @@
 ---
 sidebar_position: 1
+image: https://i.imgur.com/7xsqycJ.png
 ---
 
 # Account Abstraction
 
 Enabling the use of smart contract wallets over EOAs.
+
+<head>
+  <meta name="title" content="What is Account Abstraction? | Stackup Docs" />
+  <meta name="og:title" content="What is Account Abstraction? | Stackup Docs" />
+  <meta name="description" content="This page is an introduction to account abstraction, smart contract wallets, and ERC-4337. Learn about account abstraction here!" />
+  <meta name="og:description" content="This page is an introduction to account abstraction, smart contract wallets, and ERC-4337. Learn about account abstraction here!" />
+  <meta name="keywords" content="introduction,
+    smart contract wallet,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    stackup" />
+  <meta name="og:keywords" content="introduction,
+    smart contract wallet,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    stackup" />
+</head>
 
 <div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/wnh8Ea6aYM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 

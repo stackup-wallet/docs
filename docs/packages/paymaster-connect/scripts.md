@@ -6,6 +6,31 @@ sidebar_position: 5
 
 CLI commands for managing your paymaster on-chain.
 
+<head>
+  <meta name="title" content="Scripts for managing ERC-4337 paymasters | Stackup" />
+  <meta name="og:title" content="Scripts for managing ERC-4337 paymasters | Stackup" />
+  <meta name="description" content="Stackup's scripts enable you to easily sponsor gasless transactions. Use Paymaster Connect to manage ERC-4337 paymasters." />
+  <meta name="og:description" content="Stackup's scripts enable you to easily sponsor gasless transactions. Use Paymaster Connect to manage ERC-4337 paymasters." />
+  <meta name="keywords" content="gasless transactions,
+    sponsor Ethereum transactions,
+    pay gas fees,
+    paymaster contract,
+    ERC-4337 paymaster,
+    ERC-4337 RPC,
+    stackup-bundler,
+    account abstraction,
+    eth_sponsorUserOperation" />
+  <meta name="og:keywords" content="gasless transactions,
+    sponsor Ethereum transactions,
+    pay gas fees,
+    paymaster contract,
+    ERC-4337 paymaster,
+    ERC-4337 RPC,
+    stackup-bundler,
+    account abstraction,
+    eth_sponsorUserOperation" />
+</head>
+
 All commands can be ran with the following format:
 
 ```bash

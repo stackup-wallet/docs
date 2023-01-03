@@ -1,10 +1,32 @@
 ---
 sidebar_position: 1
+image: https://i.imgur.com/N6pe40z.png
 ---
 
 # Quickstart
 
 Explore a basic implementation of account abstraction using ERC-4337. This example will create an account and initiate a transaction on the Polygon Mumbai testnet.
+
+<head>
+  <meta name="title" content="ERC-4337 Quickstart Guide | Stackup" />
+  <meta name="og:title" content="ERC-4337 Quickstart Guide | Stackup" />
+  <meta name="description" content="This tutorial walks through a basic implementation of a smart contract wallet using ERC-4337, a proposal for account abstraction for Ethereum." />
+  <meta name="og:description" content="This tutorial walks through a basic implementation of a smart contract wallet using ERC-4337, a proposal for account abstraction for Ethereum." />
+  <meta name="keywords" content="quickstart,
+    tutorial,
+    ERC-4337,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+  <meta name="og:keywords" content="quickstart,
+    tutorial,
+    ERC-4337,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+</head>
 
 If you are new to account abstraction, we recommend the [introduction to account abstraction](/docs/introduction/account-abstraction) and an [overview of ERC-4337](/docs/introduction/erc-4337-overview).
 
