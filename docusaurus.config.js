@@ -72,12 +72,12 @@ const config = {
             label: "Docs",
           },
           {
-            href: "https://stackup.sh",
+            href: "https://www.stackup.sh",
             label: "Website",
             position: "right",
           },
           {
-            href: "https://github.com/stackup-wallet",
+            href: "https://www.github.com/stackup-wallet",
             label: "GitHub",
             position: "right",
           },
@@ -105,7 +105,7 @@ const config = {
             items: [
               {
                 label: "Twitter",
-                href: "https://twitter.com/stackup_fi",
+                href: "https://www.twitter.com/stackup_fi",
               },
               {
                 label: "Discord",
@@ -118,11 +118,11 @@ const config = {
             items: [
               {
                 label: "Website",
-                href: "https://stackup.sh",
+                href: "https://www.stackup.sh",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/stackup-wallet",
+                href: "https://www.github.com/stackup-wallet",
               },
               {
                 label: "E-mail",
