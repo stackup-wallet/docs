@@ -9,6 +9,15 @@ description: This page lists the environment variables for configuring a local E
 
 Options to configure a bundler with env variables.
 
+<head>
+  <meta name="title" content="How to configure an ERC-4337 bundler | Stackup" />
+  <meta name="og:title" content="How to configure an ERC-4337 bundler | Stackup" />
+  <meta name="description" content="This page lists the environment variables for configuring a local EIP-4337 bundler using stackup-bundler." />
+  <meta name="og:description" content="This page lists the environment variables for configuring a local EIP-4337 bundler using stackup-bundler." />
+  <meta name="keywords" content="ERC-4337 bundler, account abstraction, ERC-4337, EIP-4337" />
+  <meta name="og:keywords" content="ERC-4337 bundler, account abstraction, ERC-4337, EIP-4337" />
+</head>
+
 The Bundler can be configured through environment variables or a `.env` file at the working directory. Some variables are required while others are optional.
 
 ## Environment variables

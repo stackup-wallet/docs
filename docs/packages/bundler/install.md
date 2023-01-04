@@ -9,6 +9,27 @@ description: This page shows how to spin up a local ERC-4337 bundler using Stack
 
 A guide to spinning up a bundler and RPC client to handle ops.
 
+<head>
+  <meta name="title" content="How to install a local ERC-4337 bundler | Stackup" />
+  <meta name="og:title" content="How to install a local ERC-4337 bundler | Stackup" />
+  <meta name="description" content="This page shows how to spin up a local ERC-4337 bundler using Stackup." />
+  <meta name="og:description" content="This page shows how to spin up a local ERC-4337 bundler using Stackup." />
+  <meta name="keywords" content="ERC-4337 bundler,
+    ERC-4337 Go Ethereum,
+    install stackup-bundler,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    geth ERC-4337" />
+  <meta name="og:keywords" content="ERC-4337 bundler,
+    ERC-4337 Go Ethereum,
+    install stackup-bundler,
+    account abstraction,
+    ERC-4337,
+    EIP-4337,
+    geth ERC-4337" />
+</head>
+
 This package is a Go implementation of an ERC-4337 `Bundler`. The current version supports a private mempool with a peer-to-peer (P2P) version on the roadmap.
 
 This package is open source at [github.com/stackup-wallet/stackup-bundler](https://github.com/stackup-wallet/stackup-bundler).

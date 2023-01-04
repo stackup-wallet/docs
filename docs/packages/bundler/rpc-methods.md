@@ -9,6 +9,31 @@ description: This page is a reference for all supported RPC methods in stackup-b
 
 A reference to the supported RPC methods.
 
+<head>
+  <meta name="title" content="Stackup bundler RPC methods | Stackup" />
+  <meta name="og:title" content="Stackup bundler RPC methods | Stackup" />
+  <meta name="description" content="This page is a reference for all supported RPC methods in stackup-bundler, Stackup's ERC-4337 service." />
+  <meta name="og:description" content="This page is a reference for all supported RPC methods in stackup-bundler, Stackup's ERC-4337 service." />
+  <meta name="keywords" content="ERC-4337 RPC,
+    ERC-4337 bundler,
+    stackup-bundler,
+    account abstraction,
+    eth_sendUserOperation,
+    UserOperation,
+    geth ERC-4337,
+    EntryPoint,
+    entry points" />
+  <meta name="og:keywords" content="ERC-4337 RPC,
+    ERC-4337 bundler,
+    stackup-bundler,
+    account abstraction,
+    eth_sendUserOperation,
+    UserOperation,
+    geth ERC-4337,
+    EntryPoint,
+    entry points" />
+</head>
+
 ## Client methods
 
 All RPC methods listed here are required to be compliant as an ERC-4337 bundler.

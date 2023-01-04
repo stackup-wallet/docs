@@ -9,6 +9,33 @@ description: Learn how to sign transactions using EIP-4337 smart contract wallet
 
 Encoding the data to validate a UserOperation.
 
+<head>
+  <meta name="title" content="How to sign UserOperation transactions in ERC-4337 | Stackup" />
+  <meta name="og:title" content="How to sign UserOperation transactions in ERC-4337 | Stackup" />
+  <meta name="description" content="Learn how to sign transactions using EIP-4337 smart contract wallets and paymaster accounts. Get started with account abstraction today!" />
+  <meta name="og:description" content="Learn how to sign transactions using EIP-4337 smart contract wallets and paymaster accounts. Get started with account abstraction today!" />
+  <meta name="keywords" content="ERC-4337 callData,
+    example UserOperation,
+    EntryPoint,
+    signature,
+    BLS signatures,
+    call data,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+  <meta name="og:keywords" content="ERC-4337 callData,
+    example UserOperation,
+    EntryPoint,
+    signature,
+    BLS signatures,
+    call data,
+    EIP-4337,
+    stackup,
+    smart contract wallet,
+    account abstraction" />
+</head>
+
 The ERC-4337 standard is un-opinionated in terms of how the signature field is encoded. **In this guide, we outline what the [Contracts package](/docs/category/contracts) requires from the [`UserOperation`](../introduction/erc-4337-overview.md#useroperation) for validation.**
 
 ## The `requestId`
