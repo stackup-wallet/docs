@@ -9,27 +9,6 @@ description: Learn how to deploy smart contract accounts and create addresses us
 
 An intro to the Contract Account code and address.
 
-<head>
-  <meta name="title" content="How to deploy smart contract wallets | Stackup" />
-  <meta name="og:title" content="How to deploy smart contract wallets | Stackup" />
-  <meta name="description" content="Learn how to deploy smart contract accounts and create addresses using EIP-4337." />
-  <meta name="og:description" content="Learn how to deploy smart contract accounts and create addresses using EIP-4337." />
-  <meta name="keywords" content="deploy smart contract wallet,
-    introduction to smart contract wallets,
-    ERC-4337,
-    EIP-4337,
-    stackup,
-    smart contract wallet,
-    account abstraction" />
-  <meta name="og:keywords" content="deploy smart contract wallet,
-    introduction to smart contract wallets,
-    ERC-4337,
-    EIP-4337,
-    stackup,
-    smart contract wallet,
-    account abstraction" />
-</head>
-
 A `Contract Account` can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
 
 :::info

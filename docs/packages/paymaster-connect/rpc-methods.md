@@ -9,29 +9,6 @@ description: This page is a reference for all supported RPC methods in Paymaster
 
 A reference to the supported RPC methods.
 
-<head>
-  <meta name="title" content="Paymaster RPC methods | Stackup" />
-  <meta name="og:title" content="Paymaster RPC methods | Stackup" />
-  <meta name="description" content="This page is a reference for all supported RPC methods in Paymaster Connect, Stackup's ERC-4337 service for sponsoring gasless transactions." />
-  <meta name="og:description" content="This page is a reference for all supported RPC methods in Paymaster Connect, Stackup's ERC-4337 service for sponsoring gasless transactions." />
-  <meta name="keywords" content="gasless transactions,
-    sponsor Ethereum transactions,
-    pay gas fees,
-    ERC-4337 paymaster,
-    ERC-4337 RPC,
-    stackup-bundler,
-    account abstraction,
-    eth_sponsorUserOperation" />
-  <meta name="og:keywords" content="gasless transactions,
-    sponsor Ethereum transactions,
-    pay gas fees,
-    ERC-4337 paymaster,
-    ERC-4337 RPC,
-    stackup-bundler,
-    account abstraction,
-    eth_sponsorUserOperation" />
-</head>
-
 ## Paymaster methods
 
 These methods relate to sponsoring a `UserOperation` using `Paymaster Connect`.

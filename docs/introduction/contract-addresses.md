@@ -9,15 +9,6 @@ description: Find the latest official ERC-4337 contract addresses, such as the E
 
 A reference to related ERC-4337 addresses.
 
-<head>
-  <meta name="title" content="Reference EIP-4337 contract addresses | Stackup" />
-  <meta name="og:title" content="Reference EIP-4337 contract addresses | Stackup" />
-  <meta name="description" content="This page lists the latest official ERC-4337 contract addresses, such as the EntryPoint." />
-  <meta name="og:description" content="This page lists the latest official ERC-4337 contract addresses, such as the EntryPoint." />
-  <meta name="keywords" content="EntryPoint, account abstraction, ERC-4337, EIP-4337" />
-  <meta name="og:keywords" content="EntryPoint, account abstraction, ERC-4337, EIP-4337" />
-</head>
-
 ## EntryPoint
 
 A summary of EntryPoint addresses. These are the same on all EVM networks.

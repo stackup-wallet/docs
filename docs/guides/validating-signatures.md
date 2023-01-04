@@ -9,33 +9,6 @@ description: Learn how to validate signatures from smart contract accounts using
 
 Why Contract Accounts need EIP-1271.
 
-<head>
-  <meta name="title" content="How to verify signatures with EIP-1271 | Stackup" />
-  <meta name="og:title" content="How to verify signatures with EIP-1271 | Stackup" />
-  <meta name="description" content="Learn how to validate signatures from smart contract accounts using EIP-1271 using this guide. Example included!" />
-  <meta name="og:description" content="Learn how to validate signatures from smart contract accounts using EIP-1271 using this guide. Example included!" />
-  <meta name="keywords" content="EIP-1271,
-    ERC-1271,
-    EntryPoint,
-    signature,
-    BLS signatures,
-    call data,
-    EIP-4337,
-    stackup,
-    smart contract wallet,
-    account abstraction" />
-  <meta name="og:keywords" content="EIP-1271,
-    ERC-1271,
-    EntryPoint,
-    signature,
-    BLS signatures,
-    call data,
-    EIP-4337,
-    stackup,
-    smart contract wallet,
-    account abstraction" />
-</head>
-
 A `Contract Account` enables arbitrary verification logic that can support multisig and any signature scheme. This is an advantage over an `EOA` which limits users to only ECDSA.
 
 ## Validating signatures with contracts
