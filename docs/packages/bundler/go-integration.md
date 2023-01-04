@@ -1,31 +1,13 @@
 ---
 sidebar_position: 4
+title: How to integrate ERC-4337 bundlers in Golang apps
+sidebar_label: Go integration
+description: This page shows how to port Stackup bundler packages into other Golang based applications, such as Golang based block builders.
 ---
 
 # Go integration
 
 Using the bundler in external Golang applications.
-
-<head>
-  <meta name="title" content="How to integrate ERC-4337 bundlers in Golang apps | Stackup" />
-  <meta name="og:title" content="How to integrate ERC-4337 bundlers in Golang apps | Stackup" />
-  <meta name="description" content="This page shows how to port Stackup bundler packages into other Golang based applications, such as Golang based block builders." />
-  <meta name="og:description" content="This page shows how to port Stackup bundler packages into other Golang based applications, such as Golang based block builders." />
-  <meta name="keywords" content="ERC-4337 bundler,
-    ERC-4337 Go Ethereum,
-    stackup-bundler,
-    account abstraction,
-    ERC-4337,
-    EIP-4337,
-    geth ERC-4337" />
-  <meta name="og:keywords" content="ERC-4337 bundler,
-    ERC-4337 Go Ethereum,
-    stackup-bundler,
-    account abstraction,
-    ERC-4337,
-    EIP-4337,
-    geth ERC-4337" />
-</head>
 
 Besides running as a standalone service, the bundler is built with packages that can be ported into other Golang based applications. This is useful for Golang based block builders who want to support EIP-4337.
 

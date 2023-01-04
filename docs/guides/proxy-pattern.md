@@ -1,31 +1,13 @@
 ---
 sidebar_position: 6
+title: How to use proxy pattern with Solidity & EIP-1967
+sidebar_label: Proxy Pattern
+description: Learn how to deploy smart contracts and wallets using a proxy pattern to save gas fees and simplify user experience.
 ---
 
 # Proxy Pattern
 
 A lightweight contract for delegating calls.
-
-<head>
-  <meta name="title" content="How to use proxy pattern with Solidity & EIP-1967 | Stackup" />
-  <meta name="og:title" content="How to use proxy pattern with Solidity & EIP-1967 | Stackup" />
-  <meta name="description" content="Learn how to deploy smart contracts and wallets using a proxy pattern to save gas fees and simplify user experience." />
-  <meta name="og:description" content="Learn how to deploy smart contracts and wallets using a proxy pattern to save gas fees and simplify user experience." />
-  <meta name="keywords" content="deploy smart contract proxy,
-    ERC1967Proxy.sol,
-    ERC-1967,
-    Ethereum proxy,
-    smart contract factory,
-    smart contract design patterns,
-    smart contract tutorial" />
-  <meta name="og:keywords" content="deploy smart contract proxy,
-    ERC1967Proxy.sol,
-    ERC-1967,
-    Ethereum proxy,
-    smart contract factory,
-    smart contract design patterns,
-    smart contract tutorial" />
-</head>
 
 ## Naive account abstraction
 

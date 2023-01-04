@@ -1,31 +1,13 @@
 ---
 sidebar_position: 2
+title: How to configure an ERC-4337 paymaster
+sidebar_label: Configuration
+description: This page lists the environment variables for configuring an EIP-4337 paymaster using Paymaster Connect by Stackup. Start sponsoring gasless transactions today!
 ---
 
 # Configuration
 
 Options to configure a paymaster service.
-
-<head>
-  <meta name="title" content="How to configure an ERC-4337 paymaster | Stackup" />
-  <meta name="og:title" content="How to configure an ERC-4337 paymaster | Stackup" />
-  <meta name="description" content="This page lists the environment variables for configuring an EIP-4337 paymaster using Paymaster Connect by Stackup. Start sponsoring gasless transactions today!" />
-  <meta name="og:description" content="This page lists the environment variables for configuring an EIP-4337 paymaster using Paymaster Connect by Stackup. Start sponsoring gasless transactions today!" />
-  <meta name="keywords" content="gasless transactions,
-    sponsor Ethereum transactions,
-    pay gas fees,
-    ERC-4337 paymaster,
-    account abstraction,
-    ERC-4337,
-    EIP-4337" />
-  <meta name="og:keywords" content="gasless transactions,
-    sponsor Ethereum transactions,
-    pay gas fees,
-    ERC-4337 paymaster,
-    account abstraction,
-    ERC-4337,
-    EIP-4337" />
-</head>
 
 The `Paymaster Connect` service can be configured either through a `.paymasterrc.json` file or using environment variables.
 

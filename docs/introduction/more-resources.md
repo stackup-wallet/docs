@@ -1,27 +1,13 @@
 ---
 sidebar_position: 3
+title: Account Abstraction Resources
+sidebar_label: More Resources
+description: This page contains a list of references about EIP-4337 and account abstraction, curated by the Stackup team. Find everything you need to get started here!
 ---
 
 # More Resources
 
 A list of external resources to learn more.
-
-<head>
-  <meta name="title" content="Account Abstraction Resources | Stackup" />
-  <meta name="og:title" content="Account Abstraction Resources | Stackup" />
-  <meta name="description" content="This page contains a list of references about EIP-4337 and account abstraction, curated by the Stackup team. Find everything you need to get started here!" />
-  <meta name="og:description" content="This page contains a list of references about EIP-4337 and account abstraction, curated by the Stackup team. Find everything you need to get started here!" />
-  <meta name="keywords" content="ERC-4337 reference,
-    EIP-4337 resources,
-    smart contract wallet,
-    account abstraction,
-    stackup" />
-  <meta name="og:keywords" content="ERC-4337 reference,
-    EIP-4337 resources,
-    smart contract wallet,
-    account abstraction,
-    stackup" />
-</head>
 
 ## 📝 Source Material
 
