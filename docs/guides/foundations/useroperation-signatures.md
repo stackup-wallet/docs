@@ -1,8 +1,8 @@
 ---
 sidebar_position: 4
-title: How UserOperation signatures work in ERC-4337
+title: ERC-4337 UserOperation signature
 sidebar_label: UserOperation signature
-description: Learn how serOperation signatures work in ERC-4337 and the basis of the userOpHash.
+description: Learn the foundational concepts of how a ERC-4337 UserOperation is signed and how a UserOpHash can be generated in Solidity, JS, and Go.
 ---
 
 # UserOperation signature

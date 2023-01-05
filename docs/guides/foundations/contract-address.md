@@ -1,8 +1,8 @@
 ---
 sidebar_position: 1
-title: How to deploy smart contract wallets
+title: ERC-4337 contract addresses
 sidebar_label: Contract address
-description: Learn how to deploy smart contract accounts and create addresses using EIP-4337.
+description: Learn the foundational concepts of the CREATE2 opcode and how smart contract wallets generate counterfactual addresses.
 ---
 
 # Contract address

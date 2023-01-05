@@ -4,10 +4,14 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
+const description =
+  "Stackup provides account abstraction and ERC-4337 infrastructure and tools for teams to build amazing crypto native experiences.";
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Stackup Docs",
-  tagline: "Open source tools for building Web3 apps with account abstraction.",
+  tagline:
+    "Developer tools and infrastructure for building Web3 apps with smart contract accounts.",
   url: "https://docs.stackup.sh",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -147,13 +151,12 @@ const config = {
           content: "https://i.imgur.com/hNJp1R1.png",
         },
         {
-          property: "og:url",
-          content: "https://docs.stackup.sh/",
+          property: "description",
+          content: description,
         },
         {
           property: "og:description",
-          content:
-            "Open source tools for building Web3 apps with account abstraction.",
+          content: description,
         },
         {
           property: "og:site_name",

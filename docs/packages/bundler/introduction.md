@@ -2,7 +2,7 @@
 sidebar_position: 1
 title: ERC-4337 Bundler
 sidebar_label: Introduction
-description: What are Bundlers and how does Stackup's bundler help to deliver account abstraction with EIP-4337.
+description: What are Bundlers and how does Stackup's bundler infrastructure help to deliver account abstraction with EIP-4337.
 ---
 
 # Introduction

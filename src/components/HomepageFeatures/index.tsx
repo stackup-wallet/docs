@@ -45,10 +45,10 @@ function Feature({ title, icon, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className="text--center">
-        <h1 className={styles.featureIcon}>{icon}</h1>
+        <h2 className={styles.featureIcon}>{icon}</h2>
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <p>{description}</p>
       </div>
     </div>

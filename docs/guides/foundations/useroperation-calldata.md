@@ -1,8 +1,8 @@
 ---
 sidebar_position: 3
-title: Overview of UserOperation callData in ERC-4337
+title: ERC-4337 UserOperation callData
 sidebar_label: UserOperation callData
-description: Learn how transaction data is sent and encoded in EIP-4337 UserOperation objects
+description: Learn the foundational concepts of how instructions are given to a ERC-4337 smart contract wallet through UserOperation callData.
 ---
 
 # UserOperation callData

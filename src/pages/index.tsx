@@ -1,5 +1,6 @@
 import React from "react";
 import clsx from "clsx";
+import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
@@ -28,8 +29,15 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout>
+      <Head>
+        <title>
+          Developer docs for building smart contract accounts |{" "}
+          {siteConfig.title}
+        </title>
+      </Head>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
