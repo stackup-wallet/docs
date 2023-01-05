@@ -17,7 +17,7 @@ But let's say your smart contract is assigned an owner that holds an arbitrary p
 
 ## Example: signing up for an app with a smart contract account
 
-Let take a look at the example of signing up to an app like [OpenSea](https://opensea.io/) with a smart contract account like [Stackup](https://stackup.sh/). Below is the following flow that you're likely familiar with.
+Let take a look at the example of signing up to an app like [OpenSea](https://opensea.io/) with a smart contract account like [Stackup](https://www.stackup.sh/). Below is the following flow that you're likely familiar with.
 
 ![Signature validation example](../../../static/img/signature-validation-example.png)
 

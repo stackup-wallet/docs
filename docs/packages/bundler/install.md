@@ -17,7 +17,7 @@ This package is open source at [github.com/stackup-wallet/stackup-bundler](https
 
 **Looking for a fully managed instance for your project instead?**
 
-Use our [cloud platform](https://app.stackup.sh/) to get set up with a bundler in 2 minutes 🚀
+Use our [cloud platform](https://app.stackup.sh/sign-in) to get set up with a bundler in 2 minutes 🚀
 
 :::
 

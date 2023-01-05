@@ -53,7 +53,7 @@ A `config.json` file will be created. The file will look like this:
 
 If you are not running a local [bundler](https://github.com/stackup-wallet/stackup-bundler) or network node, you will need to set a `bundlerUrl` and `rpcUrl`.
 
-You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh). In this example, select the Polygon Mumbai network for the instance. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
+You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh/sign-in). In this example, select the Polygon Mumbai network for the instance. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
 
 ![Copy the bundler instance URL from the Stackup app](../../static/img/copy-bundler-url.png)
 
