@@ -37,6 +37,11 @@ export default function Home(): JSX.Element {
           Developer docs for building smart contract accounts |{" "}
           {siteConfig.title}
         </title>
+        <meta
+          name="description"
+          content="Stackup provides ERC-4337 infrastructure, tools, and APIs for teams to
+          build Web3 apps with smart contract accounts."
+        />
       </Head>
       <HomepageHeader />
       <main>
