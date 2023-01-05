@@ -16,35 +16,31 @@ export default function Diagram(): JSX.Element {
         </defs>
         <g clip-path="url(#clip0)">
           <rect x="0" y="0" width="945" height="301.614" fill="#FFFFFF" />
-          <a href="../category/contracts">
-            <rect
-              x="764.5"
-              y="116.351"
-              width="106"
-              height="70.9092"
-              stroke="#B7B7B7"
-              stroke-width="1.00018"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-dasharray="4.00071 3.00053"
-              fill="#F3F3F3"
-            />
-          </a>
-          <a href="../category/client-sdk">
-            <rect
-              x="152.5"
-              y="116.351"
-              width="127"
-              height="70.9092"
-              stroke="#B7B7B7"
-              stroke-width="1.00018"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              stroke-dasharray="4.00071 3.00053"
-              fill="#F3F3F3"
-            />
-          </a>
-          <a href="../category/paymaster-connect">
+          <rect
+            x="764.5"
+            y="116.351"
+            width="106"
+            height="70.9092"
+            stroke="#B7B7B7"
+            stroke-width="1.00018"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            stroke-dasharray="4.00071 3.00053"
+            fill="#F3F3F3"
+          />
+          <rect
+            x="152.5"
+            y="116.351"
+            width="127"
+            height="70.9092"
+            stroke="#B7B7B7"
+            stroke-width="1.00018"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            stroke-dasharray="4.00071 3.00053"
+            fill="#F3F3F3"
+          />
+          <a href="../api/paymaster/introduction">
             <rect
               x="152.5"
               y="208.233"
@@ -58,7 +54,7 @@ export default function Diagram(): JSX.Element {
               fill="#F3F3F3"
             />
           </a>
-          <a href="../category/bundler">
+          <a href="../packages/bundler/introduction">
             <rect
               x="301.5"
               y="116.351"
@@ -91,7 +87,7 @@ export default function Diagram(): JSX.Element {
           >
             App
           </text>
-          <a href="../packages/client-sdk/useroperation">
+          <a href="#useroperation">
             <rect
               x="175.5"
               y="139.322"
@@ -135,7 +131,7 @@ export default function Diagram(): JSX.Element {
           >
             EntryPoint
           </text>
-          <a href="../category/paymaster-connect">
+          <a href="../api/paymaster/introduction">
             <rect
               x="176.5"
               y="221.217"
@@ -153,10 +149,10 @@ export default function Diagram(): JSX.Element {
               font-size="8"
               transform="matrix(1 0 0 0.998721 181.26 236)"
             >
-              Paymaster Connect
+              Paymaster API
             </text>
           </a>
-          <a href="../category/bundler">
+          <a href="../packages/bundler/introduction">
             <rect
               x="326.5"
               y="139.322"
@@ -177,7 +173,7 @@ export default function Diagram(): JSX.Element {
               JSON RPC Client
             </text>
           </a>
-          <a href="../category/bundler">
+          <a href="../packages/bundler/introduction">
             <rect
               x="540.5"
               y="139.322"
@@ -262,51 +258,47 @@ export default function Diagram(): JSX.Element {
               Method
             </tspan>
           </text>
-          <a href="../packages/contracts/paymaster">
-            <rect
-              x="777.5"
-              y="155.301"
-              width="80.0001"
-              height="23.9693"
-              stroke="#595959"
-              stroke-width="1.00018"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              fill="#EEEEEE"
-            />
-            <text
-              font-family="Arial,Arial_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="8"
-              transform="matrix(1 0 0 0.998721 798.052 165)"
-            >
-              Paymaster
-              <tspan font-size="8" x="4.00073" y="9.01152">
-                Contract
-              </tspan>
-            </text>
-          </a>
-          <a href="../packages/contracts/wallet">
-            <rect
-              x="777.5"
-              y="124.341"
-              width="80.0001"
-              height="23.9694"
-              stroke="#595959"
-              stroke-width="1.00018"
-              stroke-linejoin="round"
-              stroke-miterlimit="10"
-              fill="#EEEEEE"
-            />
-            <text
-              font-family="Arial,Arial_MSFontService,sans-serif"
-              font-weight="400"
-              font-size="8"
-              transform="matrix(1 0 0 0.998721 789.801 139)"
-            >
-              Wallet Contract
-            </text>
-          </a>
+          <rect
+            x="777.5"
+            y="155.301"
+            width="80.0001"
+            height="23.9693"
+            stroke="#595959"
+            stroke-width="1.00018"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            fill="#EEEEEE"
+          />
+          <text
+            font-family="Arial,Arial_MSFontService,sans-serif"
+            font-weight="400"
+            font-size="8"
+            transform="matrix(1 0 0 0.998721 798.052 165)"
+          >
+            Paymaster
+            <tspan font-size="8" x="4.00073" y="9.01152">
+              Contract
+            </tspan>
+          </text>
+          <rect
+            x="777.5"
+            y="124.341"
+            width="80.0001"
+            height="23.9694"
+            stroke="#595959"
+            stroke-width="1.00018"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            fill="#EEEEEE"
+          />
+          <text
+            font-family="Arial,Arial_MSFontService,sans-serif"
+            font-weight="400"
+            font-size="8"
+            transform="matrix(1 0 0 0.998721 789.801 139)"
+          >
+            Account Contract
+          </text>
           <path
             d="M619.5 151.806 664.085 151.806 664.085 152.805 619.5 152.804ZM662.752 148.309 670.753 152.305 662.752 156.301Z"
             fill="#595959"
@@ -338,18 +330,16 @@ export default function Diagram(): JSX.Element {
             d="M215 132.663 215 129.96 215 125.653 215.062 121.775 215.062 118.537 215.062 116.04 215.062 114.417 215.062 113.855 215.062 113.294 215.062 111.671 215.062 109.174 215.062 105.866 215.062 102.058 215.062 97.751 215.063 88.3868 216.063 88.3869 216.063 97.751 216.063 102.058 216.063 105.866 216.063 109.174 216.063 111.671 216.063 113.294 216.063 113.855 216.063 114.417 216.063 116.04 216.063 118.537 216.062 121.791 216 125.653 216 129.96 216 132.663ZM219.501 131.332 215.5 139.323 211.499 131.332Z"
             fill="#595959"
           />
-          <a href="../category/client-sdk">
-            <text
-              fill="#8481ff"
-              font-family="Arial,Arial_MSFontService,sans-serif"
-              font-weight="700"
-              font-size="8"
-              transform="matrix(1 0 0 0.998721 151.845 112)"
-            >
-              Client SDK
-            </text>
-          </a>
-          <a href="../category/paymaster-connect">
+          <text
+            fill="#8481ff"
+            font-family="Arial,Arial_MSFontService,sans-serif"
+            font-weight="700"
+            font-size="8"
+            transform="matrix(1 0 0 0.998721 151.845 112)"
+          >
+            Client SDK
+          </text>
+          <a href="../api/paymaster/introduction">
             <text
               fill="#8481ff"
               font-family="Arial,Arial_MSFontService,sans-serif"
@@ -367,10 +357,10 @@ export default function Diagram(): JSX.Element {
               transform="matrix(1 0 0 0.998721 151.845 205)"
             >
               {" "}
-              Connect
+              API
             </text>
           </a>{" "}
-          <a href="../category/bundler">
+          <a href="../packages/bundler/introduction">
             <text
               fill="#8481ff"
               font-family="Arial,Arial_MSFontService,sans-serif"
@@ -397,17 +387,15 @@ export default function Diagram(): JSX.Element {
             <tspan font-size="8" x="0" y="144.184">
               Request
             </tspan>
-            <a href="../category/contracts">
-              <tspan
-                fill="#8481ff"
-                font-weight="700"
-                font-size="8"
-                x="687.261"
-                y="30.0384"
-              >
-                Contracts
-              </tspan>
-            </a>
+            <tspan
+              fill="#8481ff"
+              font-weight="700"
+              font-size="8"
+              x="687.261"
+              y="30.0384"
+            >
+              Contracts
+            </tspan>
           </text>
           <text
             font-family="Arial,Arial_MSFontService,sans-serif"

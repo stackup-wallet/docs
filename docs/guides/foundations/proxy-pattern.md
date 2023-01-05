@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 title: How to use proxy pattern with Solidity & EIP-1967
 sidebar_label: Proxy Pattern
-description: Learn how to deploy smart contracts and wallets using a proxy pattern to save gas fees and simplify user experience.
+description: Learn how to deploy smart contracts wallets using a proxy pattern to save gas fees and simplify user experience.
 ---
 
 # Proxy Pattern
@@ -48,12 +48,6 @@ The constructor takes two arguments:
 ## Building the implementation
 
 Although there are several mechanisms for building proxies and implementations, the current recommendation is to use UUPS Proxies. In this pattern, the upgrade is handled by the `Implementation` rather than in the `Proxy`. Less code in the `Proxy` means a smaller contract size and cheaper deployment!
-
-:::info
-
-All implementations in the [Contracts package](/docs/category/contracts) inherits [UUPSUpgradeable from OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/api/proxy#UUPSUpgradeable).
-
-:::
 
 ## Additional resources
 

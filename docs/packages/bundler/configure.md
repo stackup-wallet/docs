@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 title: How to configure an ERC-4337 bundler
 sidebar_label: Configure
 description: This page lists the environment variables for configuring a local EIP-4337 bundler using stackup-bundler

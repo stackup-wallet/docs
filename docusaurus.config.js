@@ -67,7 +67,7 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "/category/introduction",
+            docId: "introduction/account-abstraction",
             position: "left",
             label: "Docs",
           },
@@ -96,7 +96,7 @@ const config = {
             items: [
               {
                 label: "Get Started",
-                to: "/docs/category/introduction",
+                to: "/docs/guides/quickstart",
               },
             ],
           },

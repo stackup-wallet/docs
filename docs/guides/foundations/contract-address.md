@@ -1,19 +1,19 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: How to deploy smart contract wallets
-sidebar_label: Deployment and addresses
+sidebar_label: Contract address
 description: Learn how to deploy smart contract accounts and create addresses using EIP-4337.
 ---
 
-# Deployment and addresses
+# Contract address
 
-An intro to the Contract Account code and address.
-
-A `Contract Account` can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
+A Contract Account can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
 
 :::info
 
-Concrete examples of how to generate an ERC-4337 address and deploy the contract code is coming soon.
+This guide touches on some foundational concepts related to smart contract accounts.
+
+If you're after more abstracted and concrete examples, check out [github.com/stackup-wallet/erc-4337-examples](https://github.com/stackup-wallet/erc-4337-examples).
 
 :::
 

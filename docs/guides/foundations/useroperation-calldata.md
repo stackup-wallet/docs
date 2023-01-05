@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 title: Overview of UserOperation callData in ERC-4337
 sidebar_label: UserOperation callData
 description: Learn how transaction data is sent and encoded in EIP-4337 UserOperation objects
@@ -7,9 +7,17 @@ description: Learn how transaction data is sent and encoded in EIP-4337 UserOper
 
 # UserOperation callData
 
-The instructions for an ERC-4337 wallet.
+A [UserOperation](../../introduction/erc-4337-overview#useroperation) has a field called `callData`. This is sent to the `sender` smart contract address during the [execution phase](../../introduction/erc-4337-overview#entrypoint) in order to carry out the user's desired intent.
 
-A [`UserOperation`](../packages/client-sdk/useroperation.md#useroperation-1) has a field called `callData`. This is sent to the `sender` smart contract address during the [execution phase](../introduction/erc-4337-overview.md#entrypoint) in order to carry out the user's desired intent.
+:::info
+
+This guide touches on some foundational concepts related to smart contract accounts.
+
+If you're after more abstracted and concrete examples, check out [github.com/stackup-wallet/erc-4337-examples](https://github.com/stackup-wallet/erc-4337-examples).
+
+:::
+
+---
 
 ## An overview of transaction data
 
@@ -29,13 +37,13 @@ Now let's say wallet A wants to send Wallet B 100 USDC (an ERC-20 token). All ER
 
 **So now we can see that data is how we send instructions to a smart contract.** The `callData` in an ERC-4337 `UserOperation` is no different. It is the instructions given to the `sender` smart contract address.
 
-## Sending instructions to an ERC-4337 wallet
+## Sending instructions to an ERC-4337 account
 
 The above overview is a high level take of the data field, but what does it look like in practice? In order to start sending generic instructions to an ERC-4337 wallet, you'll need to implement an interface like this on the smart contract:
 
 ```solidity
-interface ExecutableWallet {
-  function executeUserOp(
+interface ExecutableAccount {
+  function execute(
     address to,
     uint256 value,
     bytes calldata data
@@ -44,7 +52,7 @@ interface ExecutableWallet {
 
 ```
 
-With this function available the smart contract can mimic a regular transaction when we call `executeUserOp` with `to`, `value`, and `data` as arguments. **The data that is required to call `executeUserOp` is what we would use as the `callData` field in a `UserOperation`.**
+With this function available the smart contract can mimic a regular transaction when we call `execute` with `to`, `value`, and `data` as arguments. **The data that is required to call `execute` is what we would use as the `callData` field in a `UserOperation`.**
 
 ## Encoding `callData` with ethers.js
 
@@ -61,9 +69,7 @@ With ethers.js you can use either a [human-readable ABI](https://docs.ethers.io/
 Using the wallet interface above and an ERC-20 token, a human-readable ABI would look like this:
 
 ```typescript
-const walletABI = [
-  "function executeUserOp(address to, uint256 value, bytes data)",
-];
+const walletABI = ["function execute(address to, uint256 value, bytes data)"];
 
 // An ABI can be fragments and does not have to include the entire interface.
 // As long as it includes the parts we want to use.
@@ -72,20 +78,17 @@ const partialERC20TokenABI = [
 ];
 ```
 
-With these two ABIs we can encode a `callData` for our `UserOperation` that sends an `amount` of USDC to another wallet's address:
+With these two ABIs we can encode a `callData` for our UserOperation that sends an `amount` of USDC to another wallet's address:
 
 ```typescript
 const wallet = new ethers.utils.Interface(walletABI);
 const erc20Token = new ethers.utils.Interface(partialERC20TokenABI);
 
-const callData = wallet.encodeFunctionData("executeUserOp", [
+op.callData = wallet.encodeFunctionData("execute", [
   usdcToken,
   ethers.constants.Zero,
   erc20Token.encodeFunctionData("transfer", [walletAddress, amount]),
 ]);
-
-// Send encoded callData to a UserOperationBuilder.
-builder.setCallData(callData);
 ```
 
 :::info
@@ -99,19 +102,13 @@ If we only wanted to send an `amount` of ETH (the native token) to another walle
 ```typescript
 const wallet = new ethers.utils.Interface(walletABI);
 
-const callData = wallet.encodeFunctionData("executeUserOp", [
-  usdcToken,
-  amount,
-]);
-
-// Send encoded callData to a UserOperationBuilder.
-builder.setCallData(callData);
+op.callData = wallet.encodeFunctionData("execute", [walletAddress, amount]);
 ```
 
 Just like the simplest regular transaction, there is no data field. Which means we **don't** need to encode any data within the userOp's `callData`.
 
 :::info
 
-In this guide we used the example of calling the function `executeUserOp`. However there is no reason why the smart contract wallet couldn't also have other functions that the `callData` could be encoded to run.
+In this guide we used the example of calling the function `execute`. However there is no reason why the smart contract wallet couldn't also have other functions that the `callData` could be encoded to run.
 
 :::

@@ -1,13 +1,11 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 title: How to integrate ERC-4337 bundlers in Golang apps
 sidebar_label: Go integration
 description: This page shows how to port Stackup bundler packages into other Golang based applications, such as Golang based block builders.
 ---
 
 # Go integration
-
-Using the bundler in external Golang applications.
 
 Besides running as a standalone service, the bundler is built with packages that can be ported into other Golang based applications. This is useful for Golang based block builders who want to support EIP-4337.
 

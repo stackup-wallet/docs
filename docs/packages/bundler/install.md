@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 title: How to install a local ERC-4337 bundler
 sidebar_label: Install
 description: This page shows how to spin up a local ERC-4337 bundler using Stackup

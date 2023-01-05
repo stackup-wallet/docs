@@ -1,9 +1,0 @@
-{
-  "label": "Paymaster Connect",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "title": "🚧 Paymaster Connect",
-    "description": "A framework for handling custom fee logic on any received UserOperation."
-  }
-}

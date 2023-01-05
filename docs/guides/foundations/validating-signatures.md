@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 title: How to verify signatures with EIP-1271
 sidebar_label: Validating signatures
 description: Learn how to validate signatures from smart contract accounts using EIP-1271 using this guide. Example included!
@@ -7,13 +7,11 @@ description: Learn how to validate signatures from smart contract accounts using
 
 # Validating signatures
 
-Why Contract Accounts need EIP-1271.
-
-A `Contract Account` enables arbitrary verification logic that can support multisig and any signature scheme. This is an advantage over an `EOA` which limits users to only ECDSA.
+A Contract Account enables arbitrary verification logic that can support multisig and any signature scheme. This is an advantage over an EOAs which limits users to only ECDSA.
 
 ## Validating signatures with contracts
 
-An `EOA` can use it's private key to sign messages. However, a `Contract Account` isn't inherently associated to a private key so it cannot sign messages by default.
+An EOA can use it's private key to sign messages. However, a Contract Account isn't inherently associated to a private key so it cannot sign messages by default.
 
 But let's say your smart contract is assigned an owner that holds an arbitrary private key. The contract can still be programmed to verify that a message was signed by the current owner's private key. This can also be extended for multisig cases as well with many owners.
 
@@ -21,11 +19,11 @@ But let's say your smart contract is assigned an owner that holds an arbitrary p
 
 Let take a look at the example of signing up to an app like [OpenSea](https://opensea.io/) with a smart contract wallet like [Stackup](https://stackup.sh/). Below is the following flow that you're likely familiar with.
 
-![Signature validation example](../../static/img/signature-validation-example.png)
+![Signature validation example](../../../static/img/signature-validation-example.png)
 
 Here you are verifying that you own the account you are signing up with. And this is what happens under the hood:
 
-![Validating signatures with contracts](../../static/img/validating-signatures-with-contracts.png)
+![Validating signatures with contracts](../../../static/img/validating-signatures-with-contracts.png)
 
 **Essentially, the contract has some logic to ensure that the message has been signed by the correct users or entities before approving anything.**
 
