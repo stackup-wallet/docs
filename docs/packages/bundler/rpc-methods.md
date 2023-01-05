@@ -201,13 +201,13 @@ Returns an array of supported [EntryPoint](../../introduction/erc-4337-overview.
 
 These are common error codes specified by the protocol which are in addition to the standard JSON-RPC error codes returned by a bad method call.
 
-| Code   | Description                                                                                                                        |
-| ------ | ---------------------------------------------------------------------------------------------------------------------------------- |
-| -32602 | Invalid UserOperation struct/fields                                                                                                |
-| -32500 | Transaction rejected by entryPoint's simulateValidation, during wallet creation or validation                                      |
-| -32501 | Transaction rejected by paymaster's `validatePaymasterUserOp`                                                                      |
-| -32502 | Transaction rejected because of opcode validation                                                                                  |
-| -32503 | UserOperation out of time-range: either wallet or paymaster returned a time-range, and it is already expired (or will expire soon) |
-| -32504 | Transaction rejected because paymaster (or signature aggregator) is throttled/banned                                               |
-| -32505 | Transaction rejected because paymaster (or signature aggregator) stake or unstake-delay is too low                                 |
-| -32506 | Transaction rejected because wallet specified unsupported signature aggregator                                                     |
+| Code   | Description                                                                                                                         |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| -32602 | Invalid UserOperation struct/fields                                                                                                 |
+| -32500 | Transaction rejected by entryPoint's simulateValidation, during account creation or validation                                      |
+| -32501 | Transaction rejected by paymaster's `validatePaymasterUserOp`                                                                       |
+| -32502 | Transaction rejected because of opcode validation                                                                                   |
+| -32503 | UserOperation out of time-range: either account or paymaster returned a time-range, and it is already expired (or will expire soon) |
+| -32504 | Transaction rejected because paymaster (or signature aggregator) is throttled/banned                                                |
+| -32505 | Transaction rejected because paymaster (or signature aggregator) stake or unstake-delay is too low                                  |
+| -32506 | Transaction rejected because account specified unsupported signature aggregator                                                     |

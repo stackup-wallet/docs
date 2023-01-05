@@ -7,11 +7,11 @@ description: Learn how to validate signatures from smart contract accounts using
 
 # Validating signatures
 
-A Contract Account enables arbitrary verification logic that can support multisig and any signature scheme. This is an advantage over an EOAs which limits users to only ECDSA.
+A contract account enables arbitrary verification logic that can support multisig and any signature scheme. This is an advantage over an EOAs which limits users to only ECDSA.
 
 ## Validating signatures with contracts
 
-An EOA can use it's private key to sign messages. However, a Contract Account isn't inherently associated to a private key so it cannot sign messages by default.
+An EOA can use it's private key to sign messages. However, a contract account isn't inherently associated to a private key so it cannot sign messages by default.
 
 But let's say your smart contract is assigned an owner that holds an arbitrary private key. The contract can still be programmed to verify that a message was signed by the current owner's private key. This can also be extended for multisig cases as well with many owners.
 

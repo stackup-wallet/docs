@@ -7,7 +7,7 @@ description: Learn how to deploy smart contract accounts and create addresses us
 
 # Contract address
 
-A Contract Account can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
+A contract account can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
 
 :::info
 

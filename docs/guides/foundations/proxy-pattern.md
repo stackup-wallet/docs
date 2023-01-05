@@ -11,7 +11,7 @@ A lightweight contract for delegating calls.
 
 ## Naive account abstraction
 
-A `Contract Account` will have a lot of code needed to implement complex use cases for an application. A naive approach to using account abstraction would be to deploy the same smart contract for all your users. But this is a mistake for a few reasons.
+A contract account will have a lot of code needed to implement complex use cases for an application. A naive approach to using account abstraction would be to deploy the same smart contract for all your users. But this is a mistake for a few reasons.
 
 1. It's more expensive for user's to deploy big contracts with a lot of complexity.
 2. You'll be deploying the same contract over and over again but just initialized in different ways.
