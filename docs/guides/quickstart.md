@@ -108,7 +108,7 @@ You can then find the transaction using a block explorer like [polygonscan](http
 
 ## That's it!
 
-You've successfully sent a transaction using a smart contract account and ERC-4337. Now that you've done a simple transfer with your wallet, you can also check out other commands in the example.
+You've successfully sent a transaction using a smart contract account and ERC-4337. Now that you've done a simple transfer with your account, you can also check out other commands in the example.
 
 - [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)

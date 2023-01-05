@@ -27,10 +27,10 @@ Every smart contract address has a `code` attached to it that implements the log
 const code = await provider.getCode(address);
 ```
 
-An ERC-4337 smart contract wallet is no different. Before the wallet can do common things, like validate a signature, its `code` must be deployed otherwise the EVM will not know how to handle the request. A quick way to check if a smart contract wallet is deployed is to verify if the `code` field is null or not:
+An ERC-4337 smart contract account is no different. Before the account can do common things, like validate a signature, its `code` must be deployed otherwise the EVM will not know how to handle the request. A quick way to check if a smart contract account is deployed is to verify if the `code` field is null or not:
 
 ```typescript
-const code = await provider.getCode(walletAddress);
+const code = await provider.getCode(accountAddress);
 const isDeployed = code !== "0x";
 ```
 
@@ -40,7 +40,7 @@ const isDeployed = code !== "0x";
 
 With EOAs, the address is consistent across all EVM networks. As long as a user has access to the private key they can access the same address on any network. Ideally we would also like to create the same user experience with contract accounts too.
 
-**A user should be able to deterministically know their wallet address and keep it consistent on every EVM network irrespective of whether the `code` has been deployed or not.** This means they can generate a wallet and start sending funds to it with full assurance that they'll be able to control those funds at any time given they have the correct verification method.
+**A user should be able to deterministically know their account address and keep it consistent on every EVM network irrespective of whether the `code` has been deployed or not.** This means they can generate a account and start sending funds to it with full assurance that they'll be able to control those funds at any time given they have the correct verification method.
 
 ERC-4337 does this by using the `CREATE2` opcode through a [Singleton Factory](https://eips.ethereum.org/EIPS/eip-2470). Let's break this down to understand what that means in practice.
 
@@ -51,7 +51,7 @@ ERC-4337 does this by using the `CREATE2` opcode through a [Singleton Factory](h
 Below is an example of how you can calculate a `CREATE2` address with [ethers.js](https://docs.ethers.io/v5/api/utils/address/#utils-getCreate2Address):
 
 ```typescript
-const walletAddress = ethers.utils.getCreate2Address(
+const accountAddress = ethers.utils.getCreate2Address(
   fromAddress,
   salt,
   initCodeHash

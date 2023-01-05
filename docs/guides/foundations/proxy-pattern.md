@@ -15,7 +15,7 @@ A `Contract Account` will have a lot of code needed to implement complex use cas
 
 1. It's more expensive for user's to deploy big contracts with a lot of complexity.
 2. You'll be deploying the same contract over and over again but just initialized in different ways.
-3. User's will need to deploy a whole new wallet address every time your application has a contract update.
+3. User's will need to deploy a whole new account address every time your application has a contract update.
 
 ## Proxy as the solution
 
@@ -34,7 +34,7 @@ pragma solidity 0.8.9;
 
 import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 
-contract WalletProxy is ERC1967Proxy {
+contract AccountProxy is ERC1967Proxy {
   constructor(address logic, bytes memory data) ERC1967Proxy(logic, data) {}
 }
 

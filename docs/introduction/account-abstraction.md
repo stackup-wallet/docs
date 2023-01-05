@@ -8,7 +8,7 @@ description: This page is an introduction to account abstraction, smart contract
 
 # Account Abstraction
 
-Enabling the use of smart contract wallets over EOAs.
+Enabling the use of smart contract accounts over EOAs.
 
 <div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/wnh8Ea6aYM8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 

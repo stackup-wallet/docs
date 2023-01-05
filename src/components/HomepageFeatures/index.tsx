@@ -24,8 +24,8 @@ const FeatureList: FeatureItem[] = [
     icon: "🏗",
     description: (
       <>
-        Customize how you build and interact with wallets, paymasters, bundlers,
-        and EntryPoints to fit your application's unique use case.
+        Customize how you build and interact with accounts, paymasters,
+        bundlers, and EntryPoints to fit your application's unique use case.
       </>
     ),
   },

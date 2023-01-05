@@ -23,23 +23,23 @@ If you're after more abstracted and concrete examples, check out [github.com/sta
 
 When a regular transaction is made in an EVM network it will usually consist of a `to`, `value`, and optional `data` field.
 
-Take the simplest transaction of sending 1 ETH (the native token) from wallet A to wallet B. The transaction will have the following information:
+Take the simplest transaction of sending 1 ETH (the native token) from account A to account B. The transaction will have the following information:
 
-- To: address of wallet B
+- To: address of account B
 - Value: 1 ETH
 - Data: null
 
-Now let's say wallet A wants to send Wallet B 100 USDC (an ERC-20 token). All ERC-20 tokens are just smart contracts that track address balances in it's own state. So the transaction will look like this:
+Now let's say account A wants to send account B 100 USDC (an ERC-20 token). All ERC-20 tokens are just smart contracts that track address balances in it's own state. So the transaction will look like this:
 
 - To: address of USDC smart contract
 - Value: 0 ETH
-- Data: Instructions to transfer 100 USDC from wallet A to wallet B
+- Data: Instructions to transfer 100 USDC from account A to account B
 
 **So now we can see that data is how we send instructions to a smart contract.** The `callData` in an ERC-4337 `UserOperation` is no different. It is the instructions given to the `sender` smart contract address.
 
 ## Sending instructions to an ERC-4337 account
 
-The above overview is a high level take of the data field, but what does it look like in practice? In order to start sending generic instructions to an ERC-4337 wallet, you'll need to implement an interface like this on the smart contract:
+The above overview is a high level take of the data field, but what does it look like in practice? In order to start sending generic instructions to an ERC-4337 account, you'll need to implement an interface like this on the smart contract:
 
 ```solidity
 interface ExecutableAccount {
@@ -66,10 +66,10 @@ Fortunately, we have great tools at our disposal to abstract the encoding proces
 
 With ethers.js you can use either a [human-readable ABI](https://docs.ethers.io/v5/api/utils/abi/formats/#abi-formats--human-readable-abi) or a [solidity JSON ABI](https://docs.ethers.io/v5/api/utils/abi/formats/#abi-formats--solidity). The latter can be exported by the Solidity compiler.
 
-Using the wallet interface above and an ERC-20 token, a human-readable ABI would look like this:
+Using the account interface above and an ERC-20 token, a human-readable ABI would look like this:
 
 ```typescript
-const walletABI = ["function execute(address to, uint256 value, bytes data)"];
+const accountABI = ["function execute(address to, uint256 value, bytes data)"];
 
 // An ABI can be fragments and does not have to include the entire interface.
 // As long as it includes the parts we want to use.
@@ -78,37 +78,37 @@ const partialERC20TokenABI = [
 ];
 ```
 
-With these two ABIs we can encode a `callData` for our UserOperation that sends an `amount` of USDC to another wallet's address:
+With these two ABIs we can encode a `callData` for our UserOperation that sends an `amount` of USDC to another account's address:
 
 ```typescript
-const wallet = new ethers.utils.Interface(walletABI);
+const account = new ethers.utils.Interface(accountABI);
 const erc20Token = new ethers.utils.Interface(partialERC20TokenABI);
 
-op.callData = wallet.encodeFunctionData("execute", [
+op.callData = account.encodeFunctionData("execute", [
   usdcToken,
   ethers.constants.Zero,
-  erc20Token.encodeFunctionData("transfer", [walletAddress, amount]),
+  erc20Token.encodeFunctionData("transfer", [accountAddress, amount]),
 ]);
 ```
 
 :::info
 
-In the above example our smart contract wallet is required to interact with another smart contract. Which is why we need to encode more data within the `callData`.
+In the above example our smart contract account is required to interact with another smart contract. Which is why we need to encode more data within the `callData`.
 
 :::
 
-If we only wanted to send an `amount` of ETH (the native token) to another wallet's address, the code would look like this:
+If we only wanted to send an `amount` of ETH (the native token) to another account's address, the code would look like this:
 
 ```typescript
-const wallet = new ethers.utils.Interface(walletABI);
+const account = new ethers.utils.Interface(accountABI);
 
-op.callData = wallet.encodeFunctionData("execute", [walletAddress, amount]);
+op.callData = account.encodeFunctionData("execute", [accountAddress, amount]);
 ```
 
 Just like the simplest regular transaction, there is no data field. Which means we **don't** need to encode any data within the userOp's `callData`.
 
 :::info
 
-In this guide we used the example of calling the function `execute`. However there is no reason why the smart contract wallet couldn't also have other functions that the `callData` could be encoded to run.
+In this guide we used the example of calling the function `execute`. However there is no reason why the smart contract account couldn't also have other functions that the `callData` could be encoded to run.
 
 :::

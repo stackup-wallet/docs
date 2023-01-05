@@ -15,9 +15,9 @@ An EOA can use it's private key to sign messages. However, a Contract Account is
 
 But let's say your smart contract is assigned an owner that holds an arbitrary private key. The contract can still be programmed to verify that a message was signed by the current owner's private key. This can also be extended for multisig cases as well with many owners.
 
-## Example: signing up for an app with a smart contract wallet
+## Example: signing up for an app with a smart contract account
 
-Let take a look at the example of signing up to an app like [OpenSea](https://opensea.io/) with a smart contract wallet like [Stackup](https://stackup.sh/). Below is the following flow that you're likely familiar with.
+Let take a look at the example of signing up to an app like [OpenSea](https://opensea.io/) with a smart contract account like [Stackup](https://stackup.sh/). Below is the following flow that you're likely familiar with.
 
 ![Signature validation example](../../../static/img/signature-validation-example.png)
 
