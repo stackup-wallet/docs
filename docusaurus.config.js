@@ -5,7 +5,7 @@ const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 const description =
-  "Stackup provides account abstraction and ERC-4337 infrastructure and tools for teams to build amazing crypto native experiences.";
+  "Stackup provides ERC-4337 infrastructure, tools, and APIs for teams to build Web3 apps with smart contract accounts.";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
