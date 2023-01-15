@@ -124,6 +124,33 @@ The return values will be big number hex strings.
 
 ---
 
+### `eth_getUserOperationByHash`
+
+Fetches the UserOperation and transaction context based on a given `userOpHash` returned from `eth_sendUserOperation`.
+
+#### Request
+
+```typescript
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "eth_sendUserOperation",
+  "params": [userOpHash]
+}
+```
+
+#### Response
+
+The method returns `null` if the UserOperation is not yet included in a block, otherwise:
+
+- `userOperation`: The full UserOperation
+- `entryPoint`: The EntryPoint address
+- `blockNumber`: The block number this UserOperation was included in
+- `blockHash`: The block hash this UserOperation was included in
+- `transactionHash` The transaction this UserOperation was included in
+
+---
+
 ### `eth_getUserOperationReceipt`
 
 Fetches the UserOperation receipt based on a given `userOpHash` returned from `eth_sendUserOperation`.
