@@ -46,7 +46,9 @@ A `config.json` file will be created. The file will look like this:
   "rpcUrl": "http://localhost:8545",
   "signingKey": "0x000...000",
   "entryPoint": "0x1306b01bC3e4AD202612D3843387e94737673F53",
-  "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326"
+  "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326",
+  "paymaster": "0xf5e6f3cdb0cfe01131eb6ee674cb62c9d811ac2d",
+  "verifyingPaymasterUrl": ""
 }
 
 ```
@@ -68,6 +70,8 @@ Your `config.json` fill will now look like this:
   "signingKey": "0x000...000",
   "entryPoint": "0x1306b01bC3e4AD202612D3843387e94737673F53",
   "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326"
+  "paymaster": "0xf5e6f3cdb0cfe01131eb6ee674cb62c9d811ac2d",
+  "verifyingPaymasterUrl": ""
 }
 
 ```
@@ -113,3 +117,4 @@ You've successfully sent a transaction using a smart contract account and ERC-43
 - [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
+- [Sponsored ETH transfer](https://github.com/stackup-wallet/erc-4337-examples#sponsored-eth-transfer)
