@@ -8,7 +8,7 @@ description: This tutorial walks through a basic implementation of a smart contr
 
 # Quickstart
 
-Explore a basic implementation of account abstraction using ERC-4337. This example will create an account and initiate a transaction on the Polygon Mumbai testnet.
+Explore a basic implementation of account abstraction using ERC-4337. This example will create an account and initiate a transaction on the Ethereum Goerli testnet.
 
 If you are new to account abstraction, we recommend the [introduction to account abstraction](/docs/introduction/account-abstraction) and an [overview of ERC-4337](/docs/introduction/erc-4337-overview).
 
@@ -54,18 +54,18 @@ A `config.json` file will be created. The file will look like this:
 
 If you are not running a local [bundler](https://github.com/stackup-wallet/stackup-bundler) or network node, you will need to set a `bundlerUrl` and `rpcUrl`.
 
-You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh/sign-in). In this example, select the Polygon Mumbai network for the instance. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
+You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh/sign-in). In this example, select the Ethereum Goerli network for the instance and ensure the version is set to `0.3.0`. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
 
 ![Copy the bundler instance URL from the Stackup app](../../static/img/copy-bundler-url.png)
 
-The `rpcUrl` can be set to any network node. This example is on the Polygon Mumbai testnet, so you can use https://rpc-mumbai.maticvigil.com/.
+The `rpcUrl` can be set to any network node. This example is on the Ethereum Goerli testnet, so you can use a public endpoint such as https://endpoints.omniatech.io/v1/eth/goerli/public or your own.
 
 Your `config.json` fill will now look like this:
 
 ```
 {
   "bundlerUrl": "https://app.stackup.sh/api/...",
-  "rpcUrl": "https://rpc-mumbai.maticvigil.com/",
+  "rpcUrl": "https://endpoints.omniatech.io/v1/eth/goerli/public",
   "signingKey": "0x000...000",
   "entryPoint": "0x0F46c65C17AA6b4102046935F33301f0510B163A",
   "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326"
@@ -79,36 +79,50 @@ Your `config.json` fill will now look like this:
 Create an account using the factory `simpleAccountFactory` defined in the configuration file.
 
 ```
-yarn run simpleAccount:address
+yarn run simpleAccount address
 ```
 
 An address will be returned. At this point, the smart contract account has not been deployed.
 
 ## 5. Fund the account
 
-Deposit MATIC into the account on Mumbai.
+Deposit ETH into the account on Goerli.
 
-Navigate to a faucet, such as https://faucet.polygon.technology/ and https://mumbaifaucet.com/. Enter the account address and claim the testnet MATIC.
+Navigate to a faucet, such as https://goerlifaucet.com/. Enter the account address and claim the testnet ETH.
 
 :::info
 
-Faucets do not send directly to smart contracts. You must deposit MATIC or ERC-20 tokens from the faucet before your first transaction.
+Faucets do not send directly to smart contracts. You must deposit ETH or ERC-20 tokens from the faucet before your first transaction.
 
 :::
 
 ## 6. Initiate the transfer
 
-The `simpleAccount:transfer` command allows you to transfer MATIC from the smart contract account to any address. It will create a UserOperation, sign it, and send it to the bundler:
+The `simpleAccount transfer` command allows you to transfer MATIC from the smart contract account to any address. It will create a user operation, sign it, and send it to the bundler:
 
 ```
 yarn run simpleAccount transfer --to <address> --amount <eth>
 ```
 
-You can then find the transaction using a block explorer like [polygonscan](https://mumbai.polygonscan.com/).
+You can then find the transaction using a block explorer like [etherscan](https://goerli.etherscan.io/).
 
 ## With paymaster
 
-All commands also have a optional `--withPaymaster` flag. This will send your userOperations to the `paymasterUrl` specified in your config. The endpoint is expected to implement a standard [JSON-RPC interface](../api/paymaster/rpc-methods) and return back a `paymasterAndData` field if it agrees to sponsor your transaction.
+All commands also have a optional `--withPaymaster` flag. This will send your user operations to the `paymasterUrl` specified in your config. If you are using Stackup's paymaster, the `paymasterUrl` will be the same as the `bundlerUrl` but at the paymaster endpoint.
+
+For example, if `bundlerUrl` is:
+
+```
+"bundlerUrl" = "https://app.stackup.sh/api/v1/bundler/<API key>"
+```
+
+Then your `paymasterUrl` is:
+
+```
+"paymasterUrl" = "https://app.stackup.sh/api/v1/paymaster/payg/<API key>"
+```
+
+Regardless of whether you use Stackup's paymaster service or not, the endpoint is expected to implement a standard [JSON-RPC interface](../api/paymaster/rpc-methods) and return back a `paymasterAndData` field if it agrees to sponsor your transaction.
 
 **With this option, you can execute any transaction without needing to hold ETH or MATIC for gas fees.**
 
