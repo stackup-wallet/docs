@@ -45,10 +45,9 @@ A `config.json` file will be created. The file will look like this:
   "bundlerUrl": "http://localhost:4337",
   "rpcUrl": "http://localhost:8545",
   "signingKey": "0x000...000",
-  "entryPoint": "0x1306b01bC3e4AD202612D3843387e94737673F53",
+  "entryPoint": "0x0F46c65C17AA6b4102046935F33301f0510B163A",
   "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326",
-  "paymaster": "0xf5e6f3cdb0cfe01131eb6ee674cb62c9d811ac2d",
-  "verifyingPaymasterUrl": ""
+  "paymasterUrl": ""
 }
 
 ```
@@ -68,15 +67,12 @@ Your `config.json` fill will now look like this:
   "bundlerUrl": "https://app.stackup.sh/api/...",
   "rpcUrl": "https://rpc-mumbai.maticvigil.com/",
   "signingKey": "0x000...000",
-  "entryPoint": "0x1306b01bC3e4AD202612D3843387e94737673F53",
+  "entryPoint": "0x0F46c65C17AA6b4102046935F33301f0510B163A",
   "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326"
-  "paymaster": "0xf5e6f3cdb0cfe01131eb6ee674cb62c9d811ac2d",
-  "verifyingPaymasterUrl": ""
+  "paymasterUrl": ""
 }
 
 ```
-
-Please contact us if you have any questions.
 
 ## 4. Create an account
 
@@ -105,10 +101,26 @@ Faucets do not send directly to smart contracts. You must deposit MATIC or ERC-2
 The `simpleAccount:transfer` command allows you to transfer MATIC from the smart contract account to any address. It will create a UserOperation, sign it, and send it to the bundler:
 
 ```
-yarn run simpleAccount:transfer <recipient-address> <eth-amount>
+yarn run simpleAccount transfer --to <address> --amount <eth>
 ```
 
 You can then find the transaction using a block explorer like [polygonscan](https://mumbai.polygonscan.com/).
+
+## With paymaster
+
+All commands also have a optional `--withPaymaster` flag. This will send your userOperations to the `paymasterUrl` specified in your config. The endpoint is expected to implement a standard [JSON-RPC interface](../api/paymaster/rpc-methods) and return back a `paymasterAndData` field if it agrees to sponsor your transaction.
+
+**With this option, you can execute any transaction without needing to hold ETH or MATIC for gas fees.**
+
+```
+yarn run simpleAccount transfer --to <address> --amount <eth> --withPaymaster
+```
+
+:::info
+
+If you are on a Stackup developer plan, you can get quick access to our hosted [Paymaster APIs](../api/paymaster/introduction#stackup-paymaster-api).
+
+:::
 
 ## That's it!
 
@@ -117,4 +129,3 @@ You've successfully sent a transaction using a smart contract account and ERC-43
 - [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
-- [Sponsored ETH transfer](https://github.com/stackup-wallet/erc-4337-examples#sponsored-eth-transfer)

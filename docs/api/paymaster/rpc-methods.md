@@ -31,7 +31,7 @@ If the paymaster rejects the UserOperation it does not return a result but a sta
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "eth_sponsorUserOperation",
+  "method": "pm_sponsorUserOperation",
   "params": [
     {
       sender, // address
@@ -86,7 +86,7 @@ Ideally, apps can use this method to check if a Paymaster is currently online an
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "eth_supportedEntryPoints",
+  "method": "pm_supportedEntryPoints",
   "params": [
       chainId // string
   ]
@@ -99,7 +99,7 @@ Ideally, apps can use this method to check if a Paymaster is currently online an
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "result": ["0x1306b01bC3e4AD202612D3843387e94737673F53"]
+  "result": ["0x0F46c65C17AA6b4102046935F33301f0510B163A"]
 }
 ```
 

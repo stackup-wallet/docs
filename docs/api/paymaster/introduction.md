@@ -33,7 +33,7 @@ These are paymasters that provide gas abstractions linked to an off-chain proces
 
 Sample implementation: [DepositPaymaster.sol](https://github.com/eth-infinitism/account-abstraction/blob/develop/contracts/samples/DepositPaymaster.sol)
 
-These are paymasters that provide gas abstractions linked to an ERC-20 token on-chain. For example, without account abstraction, a user who want's to send USDC will need to hold both the stablecoin and ETH in order to pay the transaction fee. This changes with the deposit paymaster as it can enable users to pay their transaction fees in USDC only and not have to hold any ETH.
+These are paymasters that provide gas abstractions linked to an ERC-20 token on-chain. For example, without account abstraction, a user who wants to send USDC will need to hold both the stablecoin and ETH in order to pay the transaction fee. This changes with the deposit paymaster as it can enable users to pay their transaction fees in USDC only and not have to hold any ETH.
 
 And because ERC-20 is a widely adopted standard, this can also work with any other token the paymaster chooses to support.
 
@@ -41,6 +41,16 @@ And because ERC-20 is a widely adopted standard, this can also work with any oth
 
 If you're looking to get started with gas abstraction quickly, Stackup provides simple Plug-n-Play APIs for common types of paymaster use cases. Refer to the table below for a list of supported Paymaster services we currently offer.
 
-| Paymaster            | Contract                                    | Description                                                                                                           | Endpoint                 |
-| -------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| PAYG (pay-as-you-go) | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `/api/v1/paymaster/payg` |
+**The following APIs are only available on the Developer plan. Make sure to enable them via your dashboard.**
+
+![Enable hosted Paymaster API](../../../static/img/enable-hosted-paymaster-api.png)
+
+:::info
+
+Hosted Paymaster APIs are currently only available on Goerli. Mumbai support will be coming soon!
+
+:::
+
+| Paymaster            | Contract                                    | Description                                                                                                           | Endpoint                           |
+| -------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| PAYG (pay-as-you-go) | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `/api/v1/paymaster/payg/<API_KEY>` |
