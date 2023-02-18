@@ -44,9 +44,9 @@ A `config.json` file will be created. The file will look like this:
 {
   "bundlerUrl": "http://localhost:4337",
   "rpcUrl": "http://localhost:8545",
-  "signingKey": "0x000...000",
-  "entryPoint": "0x0F46c65C17AA6b4102046935F33301f0510B163A",
-  "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326",
+  "signingKey": "0x...",
+  "entryPoint": "0x...",
+  "simpleAccountFactory": "0x...",
   "paymasterUrl": ""
 }
 
@@ -66,9 +66,9 @@ Your `config.json` fill will now look like this:
 {
   "bundlerUrl": "https://app.stackup.sh/api/...",
   "rpcUrl": "https://endpoints.omniatech.io/v1/eth/goerli/public",
-  "signingKey": "0x000...000",
-  "entryPoint": "0x0F46c65C17AA6b4102046935F33301f0510B163A",
-  "simpleAccountFactory": "0xc99963686CB64e3B98DF7E877318D02D85DFE326"
+  "signingKey": "0x...",
+  "entryPoint": "0x...",
+  "simpleAccountFactory": "0x..."
   "paymasterUrl": ""
 }
 

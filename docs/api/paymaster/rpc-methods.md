@@ -44,9 +44,7 @@ If the paymaster rejects the UserOperation it does not return a result but a sta
       maxFeePerGas, // uint256
       maxPriorityFeePerGas, // uint256
       paymasterAndData, // bytes
-    },
-    entryPoint, // address
-    chainId // string
+    }
   ]
 }
 ```
