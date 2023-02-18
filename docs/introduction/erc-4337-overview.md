@@ -103,13 +103,13 @@ The verification loop will also make sure that either the `Account Contract` or 
 
 ### Contract Account
 
-The `Contract Account` is a end user's account. At minimum it needs to check whether or not it will accept a `UserOperation` during the verification loop.
+The `Contract Account` is an end user's account. At minimum it needs to check whether or not it will accept a `UserOperation` during the verification loop.
 
 Additional features to support other account functions like social recovery and multi-operations can be added here too.
 
 ### Aggregator
 
-The `Aggregator` is a smart contract that is trusted to validate signatures for `Contract Accounts`. Bundlers whitelist supported `Aggregators`.
+The `Aggregator` is a smart contract that is trusted to validate signatures for `Contract Accounts`.
 
 ### Paymaster
 
