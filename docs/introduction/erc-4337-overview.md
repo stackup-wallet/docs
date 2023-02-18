@@ -12,31 +12,22 @@ import Diagram from "../../src/components/Diagram";
 
 A quick overview of the standard for developers.
 
-:::info
-
-This overview does not yet cover the `Aggregator`, the latest addition to the EIP to support aggregated signatures.
-
-:::
-
 ## Introduction
 
 This page gives a simplified overview of ERC-4337 so that developers can get a basic understanding of the different components and how they can be pieced together to build their applications. **For a full run down on the spec we recommend going straight to the [source](https://eips.ethereum.org/EIPS/eip-4337).**
 
 ## Architecture
 
-There are five main components to ERC-4337: a `UserOperation`, `Bundler`, `EntryPoint`, `Account Contract`, and `Paymaster Contract`.
+There are four main components to ERC-4337: a `UserOperation`, `Bundler`, `EntryPoint`, and `Contract Account`. These can be supplemented by `Paymasters` and `Aggregators`.
 
-![Major components of ERC-4337](../../static/img/intro-diagram.png)
+![Major components of ERC-4337](../../static/img/components-erc-4337.svg)
 
 - **`UserOperations`** are pseudo-transaction objects that are used to execute transactions with contract accounts. These are created by your app.
 - **`Bundlers`** are actors that package `UserOperations` from a mempool and send them to the `EntryPoint` contract on the blockchain.
 - **`EntryPoint`** is a smart contract that handles the verification and execution logic for transactions.
-- **`Account Contracts`** are smart contract accounts owned by a user.
-- **`Paymaster Contracts`** are optional smart contract accounts that can sponsor transactions for `Account Contracts`.
-
-In practice the process is complex. The typical lifecycle of a transaction looks like this:
-
-<Diagram />
+- **`Contract Accounts`** are smart contract accounts owned by a user.
+- **`Paymasters`** are optional smart contract accounts that can sponsor transactions for `Contract Accounts`.
+- **`Aggregators`** are optional smart contracts that can validate signatures for `Contract Accounts`.
 
 All Stackup tools are EIP-4337 compliant and composable with other open-source packages to make handling this logic easy.
 
@@ -52,7 +43,7 @@ All Stackup tools are EIP-4337 compliant and composable with other open-source p
 
 The following sections describe the `UserOperation`, `Bundler`, `EntryPoint`, `Account Contract`, and `Paymaster Contract` in more detail.
 
-## UserOperation
+### UserOperation
 
 All components of ERC-4337 revolve around a pseudo-transaction object called a `UserOperation` which is **used to execute actions through a smart contract account**. This isn't to be mistaken for a regular transaction type.
 
@@ -110,17 +101,27 @@ The verification loop will also make sure that either the `Account Contract` or 
 
 :::
 
-### Account Contract
+### Contract Account
 
-The `Account Contract` is a end user's account. At minimum it needs to check whether or not it will accept a `UserOperation` during the verification loop.
+The `Contract Account` is a end user's account. At minimum it needs to check whether or not it will accept a `UserOperation` during the verification loop.
 
 Additional features to support other account functions like social recovery and multi-operations can be added here too.
 
-### Paymaster Contract
+### Aggregator
 
-The `Paymaster Contract` is another contract account that handles any `UserOperation` with sponsored transactions. It is required to do 2 things:
+The `Aggregator` is a smart contract that is trusted to validate signatures for `Contract Accounts`. Bundlers whitelist supported `Aggregators`.
+
+### Paymaster
+
+The `Paymaster` is another contract account that handles any `UserOperation` with sponsored transactions. It is required to do 2 things:
 
 1. Check whether or not it will accept a `UserOperation` during the verification loop.
 2. Run any required fee logic in the execution loop.
 
-An example of a `Paymaster Contract` logic could be to withdraw a certain amount of ERC-20 tokens from the `Account Contract` after the `UserOperation` is executed. This allows for a UX where users can pay for gas in any currency they choose.
+An example of a `Paymaster` logic could be to withdraw a certain amount of ERC-20 tokens from the `Contract Account` after the `UserOperation` is executed. This allows for a UX where users can pay for gas in any currency they choose.
+
+## Summary
+
+Putting it all together:
+
+![How ERC-4337 works](../../static/img/detail-components-erc-4337.svg)
