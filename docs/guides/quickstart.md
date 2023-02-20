@@ -64,7 +64,7 @@ Your `config.json` fill will now look like this:
 
 ```
 {
-  "bundlerUrl": "https://app.stackup.sh/api/...",
+  "bundlerUrl": "https://node.stackup.sh/v1/rpc/...",
   "rpcUrl": "https://endpoints.omniatech.io/v1/eth/goerli/public",
   "signingKey": "0x...",
   "entryPoint": "0x...",
@@ -113,7 +113,7 @@ All commands also have a optional `--withPaymaster` flag. This will send your us
 For example, if `bundlerUrl` is:
 
 ```
-"bundlerUrl" = "https://app.stackup.sh/api/v1/bundler/<API key>"
+"bundlerUrl" = "https://node.stackup.sh/v1/rpc/<API key>"
 ```
 
 Then your `paymasterUrl` is:
