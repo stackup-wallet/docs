@@ -7,17 +7,13 @@ description: How to get started with self-hosting a production grade ERC-4337 bu
 
 # Install
 
-A guide to spinning up a bundler and RPC client to handle ops.
-
-This package is a Go implementation of an ERC-4337 `Bundler`. The current version supports a private mempool with a peer-to-peer (P2P) version on the roadmap.
-
-This package is open source at [github.com/stackup-wallet/stackup-bundler](https://github.com/stackup-wallet/stackup-bundler).
+A quick guide to spinning up an ERC-4337 bundler for handling UserOperations. This package is implemented in Go and is open source at [github.com/stackup-wallet/stackup-bundler](https://github.com/stackup-wallet/stackup-bundler).
 
 :::tip
 
 **Looking for a fully managed instance for your project instead?**
 
-Use our [cloud platform](https://app.stackup.sh/sign-in) to get set up with a bundler in 2 minutes 🚀
+Use our [hosted services](https://app.stackup.sh/sign-in) to get set up with a bundler in 2 minutes 🚀
 
 :::
 
@@ -44,7 +40,7 @@ go install github.com/stackup-wallet/stackup-bundler@vX.Y.Z
 
 :::info
 
-Running a bundler requires access to a Geth node with debug API enabled for custom tracing. Most RPC providers do not support this.
+Running a bundler requires access to a full-node with debug API enabled for [custom JS tracing](https://geth.ethereum.org/docs/developers/evm-tracing/custom-tracer#custom-javascript-tracing). Most RPC providers do not support this.
 
 :::
 
@@ -54,7 +50,7 @@ Run an instance in `private` mode:
 stackup-bundler start --mode private
 ```
 
-For a description on the CLI commands:
+For a description on the CLI commands and other supported [modes](./introduction#modes):
 
 ```bash
 stackup-bundler start --help

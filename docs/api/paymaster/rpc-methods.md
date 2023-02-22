@@ -9,11 +9,13 @@ description: How to use Stackup's Paymaster API to enable simple access to gasle
 
 This page has a reference to the list of available RPC methods that are common to all Paymaster API endpoints. For the list of available endpoints see the table [here](./introduction#stackup-paymaster-api).
 
-## Paymaster methods
+## `pm` namespace
 
-These endpoints use the `pm` (paymaster) namespace.
+These endpoints use the paymaster (`pm`) namespace.
 
-### `pm_sponsorUserOperation`
+---
+
+### Sponsor UserOperation
 
 This methods sends a UserOperation to a paymaster for off-chain verification. If approved, it will return the `paymasterAndData` field as the result which can be appended to the UserOperation before signing.
 
@@ -72,7 +74,9 @@ If the paymaster rejects the UserOperation it does not return a result but a sta
 }
 ```
 
-### `pm_supportedEntryPoints`
+---
+
+### Supported EntryPoints
 
 This method is almost identical to what is specified in the ERC-4337 standard for `eth_supportedEntryPoints` except with the inclusion of a `chainId` param. It returns an array of the entryPoint addresses supported by the paymaster for the specified Network.
 
@@ -100,6 +104,8 @@ Ideally, apps can use this method to check if a Paymaster is currently online an
   "result": ["0x0F46c65C17AA6b4102046935F33301f0510B163A"]
 }
 ```
+
+---
 
 ## Client SDK integration
 

@@ -39,5 +39,9 @@ A list of external resources to learn more.
 
 ## 💬 Communities
 
-- [Stackup Discord](https://discord.gg/FpXmvKrNed) - managed by Stackup
+- [Stackup Discord](https://discord.gg/VTjJGvMNyW) - managed by Stackup
 - [Infinitism Discord](https://discord.gg/4zeTMfSreu) - managed by core developers of EIP-4337
+
+## 📊 Dashboards
+
+- [ERC-4337 activity dashboard](https://dune.com/johnrising/erc-4337)

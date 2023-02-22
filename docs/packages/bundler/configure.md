@@ -44,6 +44,30 @@ ERC4337_BUNDLER_SUPPORTED_ENTRY_POINTS
 ERC4337_BUNDLER_BENEFICIARY
 
 # The maximum verificationGasLimit on a received UserOperation.
-# Defaults to 1500000.
+# Defaults to 1500000 wei.
 ERC4337_BUNDLER_MAX_VERIFICATION_GAS
+
+# The maximum number of pending UserOperations an unstaked sender is allowed.
+# Defaults to 4.
+ERC4337_BUNDLER_MAX_OPS_FOR_UNSTAKED_SENDER
+```
+
+## Searcher mode variables
+
+These variables are relevant to bundlers running in [`searcher` mode](./introduction#modes).
+
+Required variables:
+
+```bash
+# Connection string to a block builder that supports eth_sendBundle RPC.
+ERC4337_BUNDLER_ETH_BUILDER_URL
+```
+
+Optional variables:
+
+```bash
+# The number of future blocks to submit a transaction for.
+# A higher value may slow down processing but has a higher chance of inclusion.
+# Defaults to 25.
+ERC4337_BUNDLER_BLOCKS_IN_THE_FUTURE
 ```

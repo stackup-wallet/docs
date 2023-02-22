@@ -13,7 +13,7 @@ A list of dev tools for building apps with ERC-4337.
 
 **Interested in building Web3 apps with better UX?**
 
-Come chat with us on [Discord](https://discord.gg/FpXmvKrNed) or [E-mail](mailto:founders@stackup.sh) and help direct our road map so your team can ship faster! 🚀
+Come chat with us on [Discord](https://discord.gg/VTjJGvMNyW) or [E-mail](mailto:founders@stackup.sh) and help direct our road map so your team can ship faster! 🚀
 
 :::
 

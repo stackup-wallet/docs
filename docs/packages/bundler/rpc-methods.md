@@ -9,15 +9,15 @@ description: This page is a reference for all supported RPC methods in stackup-b
 
 A reference to the supported RPC methods.
 
-## Client methods
+## `eth` namespace
 
 All RPC methods listed here are required to be compliant as an ERC-4337 bundler.
 
 ---
 
-### `eth_sendUserOperation`
+### Send UserOperation
 
-Used to submit a [UserOperation](../../introduction/erc-4337-overview.md#useroperation) to the Bundler's mempool. It returns the `userOpHash` if the userOp was accepted otherwise returns an error.
+Used to submit a [UserOperation](../../introduction/erc-4337-overview.md#useroperation) to the mempool. It returns the `userOpHash` if the userOp was accepted otherwise returns an error.
 
 #### Request
 
@@ -48,36 +48,23 @@ Used to submit a [UserOperation](../../introduction/erc-4337-overview.md#userope
 }
 ```
 
-#### Success response
+#### Response
 
 ```typescript
 {
   "jsonrpc": "2.0",
   "id": 1,
+
+  // UserOpHash
   "result": "0x..."
-}
-```
-
-#### Error response
-
-```typescript
-{
-  "jsonrpc": "2.0",
-  "id": 1
-  "error": {
-    code,
-    message
-  }
 }
 ```
 
 ---
 
-### `eth_estimateUserOperationGas`
+### Estimate UserOperation gas
 
 This method returns estimates for PreVerificationGas, VerificationGas, and CallGasLimit given a UserOperation and EntryPoint address. The signature field and current gas values will not be validated although there should be dummy values in place for the most reliable results (e.g. a signature with the correct length).
-
-The return values will be big number hex strings.
 
 #### Request
 
@@ -85,7 +72,7 @@ The return values will be big number hex strings.
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "eth_sendUserOperation",
+  "method": "eth_estimateUserOperationGas",
   "params": [
     // UserOperation object
     {
@@ -108,12 +95,14 @@ The return values will be big number hex strings.
 }
 ```
 
-#### Success response
+#### Response
 
 ```typescript
 {
   "jsonrpc": "2.0",
   "id": 1,
+
+  // The return values are the hex strings for wei values.
   "result": {
 		"PreVerificationGas": "0x..",
 		"VerificationGas":    "0x..",
@@ -124,7 +113,7 @@ The return values will be big number hex strings.
 
 ---
 
-### `eth_getUserOperationByHash`
+### Get UserOperation by hash
 
 Fetches the UserOperation and transaction context based on a given `userOpHash` returned from `eth_sendUserOperation`.
 
@@ -134,7 +123,7 @@ Fetches the UserOperation and transaction context based on a given `userOpHash` 
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "eth_sendUserOperation",
+  "method": "eth_getUserOperationByHash",
   "params": [userOpHash]
 }
 ```
@@ -151,7 +140,7 @@ The method returns `null` if the UserOperation is not yet included in a block, o
 
 ---
 
-### `eth_getUserOperationReceipt`
+### Get UserOperation receipt
 
 Fetches the UserOperation receipt based on a given `userOpHash` returned from `eth_sendUserOperation`.
 
@@ -161,7 +150,7 @@ Fetches the UserOperation receipt based on a given `userOpHash` returned from `e
 {
   "jsonrpc": "2.0",
   "id": 1,
-  "method": "eth_sendUserOperation",
+  "method": "eth_getUserOperationReceipt",
   "params": [userOpHash]
 }
 ```
@@ -184,9 +173,9 @@ The method returns `null` if the UserOperation is not yet included in a block, o
 
 ---
 
-### `eth_supportedEntryPoints`
+### Supported EntryPoints
 
-Returns an array of supported [EntryPoint](../../introduction/erc-4337-overview.md#entrypoint) addresses as specified in the [configuration](./configure.md). The first element is the Bundler client's preferred EntryPoint.
+Returns an array of supported [EntryPoint](../../introduction/erc-4337-overview.md#entrypoint) addresses as specified in the [configuration](./configure.md). The first element is the bundler's preferred EntryPoint.
 
 #### Request
 
@@ -199,19 +188,26 @@ Returns an array of supported [EntryPoint](../../introduction/erc-4337-overview.
 }
 ```
 
-#### Success response
+#### Response
 
 ```typescript
 {
   "jsonrpc": "2.0",
   "id": 1,
+
+  // EntryPoint addresses
   "result": [
+    "0x...",
     "0x..."
   ]
 }
 ```
 
-#### Error response
+---
+
+## JSON-RPC errors
+
+All error responses have the following format:
 
 ```typescript
 {
@@ -224,9 +220,7 @@ Returns an array of supported [EntryPoint](../../introduction/erc-4337-overview.
 }
 ```
 
-## Common error codes
-
-These are common error codes specified by the protocol which are in addition to the standard JSON-RPC error codes returned by a bad method call.
+Below are the common error codes specified by the protocol. These are in addition to the standard JSON-RPC error codes returned by a bad method call.
 
 | Code   | Description                                                                                                                         |
 | ------ | ----------------------------------------------------------------------------------------------------------------------------------- |
