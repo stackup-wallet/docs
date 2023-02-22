@@ -11,7 +11,7 @@ This page has a reference to the list of available RPC methods that are common t
 
 ## `pm` namespace
 
-These endpoints use the paymaster (`pm`) namespace.
+These endpoints relate to a paymaster's off-chain component.
 
 ---
 
