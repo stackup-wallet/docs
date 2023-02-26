@@ -7,7 +7,7 @@ description: What are Bundlers and how does Stackup's bundler infrastructure hel
 
 # Introduction
 
-In ERC-4337, a bundler is the core infrastructure component that allows account abstraction to work on any EVM network. On the highest level, it's purpose is to work with a mempool of UserOperations to get the transaction to be included on-chain.
+In ERC-4337, a bundler is the core infrastructure component that allows account abstraction to work on any EVM network. On the highest level, its purpose is to work with a mempool of UserOperations to get the transaction to be included on-chain.
 
 ## Security considerations
 
