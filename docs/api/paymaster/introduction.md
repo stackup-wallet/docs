@@ -51,6 +51,7 @@ Hosted Paymaster APIs are currently only available on Goerli. Mumbai support wil
 
 :::
 
-| Paymaster            | Contract                                    | Description                                                                                                           | Endpoint                           |
-| -------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| PAYG (pay-as-you-go) | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `/api/v1/paymaster/payg/<API_KEY>` |
+| Paymaster                   | Contract                                    | Description                                                                                                           | Endpoint                                         |
+| --------------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| PAYG (pay-as-you-go) v0.4.0 | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `app.stackup.sh/api/v2/paymaster/payg/<API_KEY>` |
+| PAYG (pay-as-you-go) v0.3.0 | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `app.stackup.sh/api/v1/paymaster/payg/<API_KEY>` |
