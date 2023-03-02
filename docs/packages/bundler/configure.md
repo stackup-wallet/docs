@@ -52,6 +52,22 @@ ERC4337_BUNDLER_MAX_VERIFICATION_GAS
 ERC4337_BUNDLER_MAX_OPS_FOR_UNSTAKED_SENDER
 ```
 
+## Private mode variables
+
+These variables are relevant to bundlers running in [`private` mode](./introduction#modes).
+
+Optional variables:
+
+```bash
+# The limit for how many ops can be seen from a client without being included on-chain.
+# Defaults to 3.
+ERC4337_BUNDLER_RELAYER_BANNED_THRESHOLD
+
+# The limit for how long a banned client will be rejected for in seconds.
+# Defaults to 86400 seconds (i.e. 24 hours).
+ERC4337_BUNDLER_RELAYER_BANNED_TIME_WINDOW
+```
+
 ## Searcher mode variables
 
 These variables are relevant to bundlers running in [`searcher` mode](./introduction#modes).
