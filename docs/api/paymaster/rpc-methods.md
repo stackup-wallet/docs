@@ -109,4 +109,4 @@ Ideally, apps can use this method to check if a Paymaster is currently online an
 
 ## Client SDK integration
 
-The eth-infinitism client SDK already has a class component for integrating a generic [PaymasterAPI](https://github.com/eth-infinitism/bundler/blob/main/packages/sdk/src/PaymasterAPI.ts). If you are using this library, we also recommend creating a new `VerifyingPaymasterAPI` class that extends `PaymasterAPI` to support this interface.
+The eth-infinitism client SDK has a class component for integrating a generic [PaymasterAPI](https://github.com/eth-infinitism/bundler/blob/main/packages/sdk/src/PaymasterAPI.ts). We recommend creating a new `VerifyingPaymasterAPI` class that extends `PaymasterAPI` to support the `pm_sponsorUserOperation` method. Refer to the [examples repo](https://github.com/stackup-wallet/erc-4337-examples/blob/main/src/getPaymaster.ts) to see how you can do this using TypeScript.

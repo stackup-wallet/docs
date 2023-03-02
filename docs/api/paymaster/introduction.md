@@ -45,13 +45,13 @@ If you're looking to get started with gas abstraction quickly, Stackup provides 
 
 ![Enable hosted Paymaster API](../../../static/img/enable-hosted-paymaster-api.png)
 
-:::info
+### PAYG (pay as you go)
 
-Hosted Paymaster APIs are currently only available on Goerli. Mumbai support will be coming soon!
+Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. These are based on the [Verifying Paymaster](#verifying-paymaster) contract.
 
-:::
+Refer to the table below and the [rpc methods](./rpc-methods) page for integration details.
 
-| Paymaster                   | Contract                                    | Description                                                                                                           | Endpoint                                         |
-| --------------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| PAYG (pay-as-you-go) v0.4.0 | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `app.stackup.sh/api/v2/paymaster/payg/<API_KEY>` |
-| PAYG (pay-as-you-go) v0.3.0 | [Verifying Paymaster](#verifying-paymaster) | Gas will be fully covered for valid UserOperations and the value will be billed to your monthly invoice with Stackup. | `app.stackup.sh/api/v1/paymaster/payg/<API_KEY>` |
+| EntryPoint used                                                                                                                                  | RPC endpoint                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ |
+| [0x0576a174D229E3cFA37253523E645A78A0C91B57](https://blockscan.com/address/0x0576a174D229E3cFA37253523E645A78A0C91B57) (or bundler version v0.4) | `app.stackup.sh/api/v2/paymaster/payg/<API_KEY>` |
+| [0x0F46c65C17AA6b4102046935F33301f0510B163A](https://blockscan.com/address/0x0F46c65C17AA6b4102046935F33301f0510B163A) (or bundler version v0.3) | `app.stackup.sh/api/v1/paymaster/payg/<API_KEY>` |
