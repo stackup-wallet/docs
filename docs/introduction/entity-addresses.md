@@ -1,11 +1,11 @@
 ---
 sidebar_position: 6
-title: Reference EIP-4337 contract addresses
-sidebar_label: Contract Addresses
-description: Find the latest official ERC-4337 contract addresses, such as the EntryPoint, on all EVM networks and testnets.
+title: Reference EIP-4337 entity addresses
+sidebar_label: Entity Addresses
+description: Find the latest official ERC-4337 entity addresses, such as the EntryPoint, on all EVM networks and testnets.
 ---
 
-# Contract Addresses
+# Entity Addresses
 
 A reference to related ERC-4337 addresses.
 
