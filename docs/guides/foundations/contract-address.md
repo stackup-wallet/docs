@@ -7,7 +7,7 @@ description: Learn the foundational concepts of the CREATE2 opcode and how smart
 
 # Contract address
 
-A contract account can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under it's own address.
+A contract account can be programmed to support many different use cases for your users. In order for those use cases to be live, the `code` that implements it must be deployed to the EVM under its own address.
 
 :::info
 
@@ -40,7 +40,7 @@ const isDeployed = code !== "0x";
 
 With EOAs, the address is consistent across all EVM networks. As long as a user has access to the private key they can access the same address on any network. Ideally we would also like to create the same user experience with contract accounts too.
 
-**A user should be able to deterministically know their account address and keep it consistent on every EVM network irrespective of whether the `code` has been deployed or not.** This means they can generate a account and start sending funds to it with full assurance that they'll be able to control those funds at any time given they have the correct verification method.
+**A user should be able to deterministically know their account address and keep it consistent on every EVM network irrespective of whether the `code` has been deployed or not.** This means they can generate an account and start sending funds to it with full assurance that they'll be able to control those funds at any time given they have the correct verification method.
 
 ERC-4337 does this by using the `CREATE2` opcode through a [Singleton Factory](https://eips.ethereum.org/EIPS/eip-2470). Let's break this down to understand what that means in practice.
 
@@ -68,7 +68,7 @@ The `fromAddress` is the address of the [Singleton Factory](https://eips.ethereu
 
 ### `salt`
 
-For an ERC-4337 accounts, the `salt` parameter is the first `nonce` value. This is most likely `0`.
+For an ERC-4337 account, the `salt` parameter is the first `nonce` value. This is most likely `0`.
 
 ### `initCodeHash`
 
