@@ -54,18 +54,18 @@ A `config.json` file will be created. The file will look like this:
 
 If you are not running a local [bundler](https://github.com/stackup-wallet/stackup-bundler) or network node, you will need to set a `bundlerUrl` and `rpcUrl`.
 
-You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh/sign-in). In this example, select the Ethereum Goerli network for the instance and ensure the version is set to `0.3.0`. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
+You can create a free bundler instance at [app.stackup.sh](https://app.stackup.sh/sign-in). In this example, select the Ethereum Goerli network for the instance and ensure the version is set to `0.4.0`. Once the instance is created, copy the instance URL and replace the default `bundlerUrl` with the generated address.
 
 ![Copy the bundler instance URL from the Stackup app](../../static/img/copy-bundler-url.png)
 
-The `rpcUrl` can be set to any network node. This example is on the Ethereum Goerli testnet, so you can use a public endpoint such as https://endpoints.omniatech.io/v1/eth/goerli/public or your own.
+The `rpcUrl` can be set to any network node. Stackup's bundler also runs a full node, so you can send any normal RPC requests to it as well. In this example we'll set the `bundlerUrl` and `rpcUrl` to the same endpoint.
 
 Your `config.json` fill will now look like this:
 
 ```
 {
   "bundlerUrl": "https://node.stackup.sh/v1/rpc/...",
-  "rpcUrl": "https://endpoints.omniatech.io/v1/eth/goerli/public",
+  "rpcUrl": "https://node.stackup.sh/v1/rpc/...",
   "signingKey": "0x...",
   "entryPoint": "0x...",
   "simpleAccountFactory": "0x..."
@@ -106,7 +106,7 @@ yarn run simpleAccount transfer --to <address> --amount <eth>
 
 You can then find the transaction using a block explorer like [etherscan](https://goerli.etherscan.io/).
 
-## With paymaster
+### With a paymaster
 
 All commands also have a optional `--withPaymaster` flag. This will send your user operations to the `paymasterUrl` specified in your config. If you are using Stackup's paymaster, the `paymasterUrl` will be the same as the `bundlerUrl` but at the paymaster endpoint.
 
@@ -119,7 +119,7 @@ For example, if `bundlerUrl` is:
 Then your `paymasterUrl` is:
 
 ```
-"paymasterUrl" = "https://app.stackup.sh/api/v1/paymaster/payg/<API key>"
+"paymasterUrl" = "https://app.stackup.sh/api/v2/paymaster/payg/<API key>"
 ```
 
 Regardless of whether you use Stackup's paymaster service or not, the endpoint is expected to implement a standard [JSON-RPC interface](../api/paymaster/rpc-methods) and return back a `paymasterAndData` field if it agrees to sponsor your transaction.
@@ -136,9 +136,15 @@ If you are on a Stackup developer plan, you can get quick access to our hosted [
 
 :::
 
-## That's it!
+## Next Steps
 
-You've successfully sent a transaction using a smart contract account and ERC-4337. Now that you've done a simple transfer with your account, you can also check out other commands in the example.
+You've successfully sent a transaction using a smart contract account and ERC-4337. Now that you've done a simple transfer with your account, you can also check out other commands in the example, or check out some SDKs compatible with Stackup.
+
+### Third Party SDKs
+
+- [ZeroDev](https://www.zerodev.app/) is a smart contract wallet framework that greatly simplifies the implementation of smart contract accounts for wallets and dapps. View their [getting started guide](https://docs.zerodev.app/get-started) to create an example React app.
+
+### Examples
 
 - [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
 - [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
