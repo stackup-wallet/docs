@@ -7,7 +7,7 @@ description: What are paymasters and how to use Stackup to enable simple access 
 
 # Introduction
 
-Account abstraction with ERC-4337 enable special entities called **paymasters**. These are third-parties that can sponsor the gas for an account if their conditions are met. This enables account holders to pay for transaction fees in many different ways without resulting to custodial solutions.
+Account abstraction with ERC-4337 enable special entities called **paymasters**. These are third-parties that can sponsor the gas for an account if their conditions are met. This enables account holders to pay for transaction fees in many different ways without resorting to custodial solutions.
 
 ## Running a paymaster
 
