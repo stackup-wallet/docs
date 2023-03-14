@@ -7,7 +7,7 @@ description: Find the latest official ERC-4337 entity addresses, such as the Ent
 
 # Entity Addresses
 
-A reference to related ERC-4337 addresses.
+A reference to related ERC-4337 addresses. Refer [here](../api/nodes#supported-networks) for a overview of supported networks.
 
 ## EntryPoint
 
@@ -24,10 +24,9 @@ A summary of EntryPoint addresses. These are the same on all EVM networks. The l
 
 These are the official bundler addresses ran by Stackup for bundler versions `v0.4` and up.
 
-| Address                                                                                                                | Bundler version                                                                 | Networks          |
-| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------- |
-| [0x9C98B1528C26Cf36E78527308c1b21d89baED700](https://blockscan.com/address/0x9C98B1528C26Cf36E78527308c1b21d89baED700) | [v0.4.x](https://github.com/stackup-wallet/stackup-bundler/releases/tag/v0.4.0) | Ethereum, Polygon |
-| [0xd6E857a2683e8dC995a4689AEB008Cf246220031](https://blockscan.com/address/0xd6E857a2683e8dC995a4689AEB008Cf246220031) | [v0.4.x](https://github.com/stackup-wallet/stackup-bundler/releases/tag/v0.4.0) | Goerli, Mumbai    |
+| Address                                                                                                                | Bundler version                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [0x9C98B1528C26Cf36E78527308c1b21d89baED700](https://blockscan.com/address/0x9C98B1528C26Cf36E78527308c1b21d89baED700) | [v0.4.x](https://github.com/stackup-wallet/stackup-bundler/releases/tag/v0.4.0) |
 
 ## Stackup Paymasters
 
