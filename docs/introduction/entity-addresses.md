@@ -32,9 +32,10 @@ These are the official bundler addresses ran by Stackup for bundler versions `v0
 
 These are the official paymaster addresses ran by Stackup that supports the [latest audited EntryPoint](https://blockscan.com/address/0x0576a174D229E3cFA37253523E645A78A0C91B57).
 
-| Address                                                                                                                         | Type                                                     | Networks |
-| ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------- |
-| [0x6087C019C9495139AD9ED230173e8681DEe3FFF2](https://etherscan.io/address/0x6087C019C9495139AD9ED230173e8681DEe3FFF2)           | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Ethereum |
-| [0x474Ea64BEdDE53aaD1084210BD60eeF2989bF80f](https://polygonscan.com/address/0x474Ea64BEdDE53aaD1084210BD60eeF2989bF80f)        | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Polygon  |
-| [0x7122EDe4e3823387a69F42193baD1409BfD97AC8](https://goerli.etherscan.io/address/0x7122EDe4e3823387a69F42193baD1409BfD97AC8)    | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Goerli   |
-| [0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6](https://mumbai.polygonscan.com/address/0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6) | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Mumbai   |
+| Address                                                                                                                               | Type                                                     | Networks        |
+| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------- |
+| [0x6087C019C9495139AD9ED230173e8681DEe3FFF2](https://etherscan.io/address/0x6087C019C9495139AD9ED230173e8681DEe3FFF2)                 | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Ethereum        |
+| [0x474Ea64BEdDE53aaD1084210BD60eeF2989bF80f](https://polygonscan.com/address/0x474Ea64BEdDE53aaD1084210BD60eeF2989bF80f)              | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Polygon         |
+| [0x7122EDe4e3823387a69F42193baD1409BfD97AC8](https://goerli.etherscan.io/address/0x7122EDe4e3823387a69F42193baD1409BfD97AC8)          | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Goerli          |
+| [0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6](https://mumbai.polygonscan.com/address/0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6)       | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Mumbai          |
+| [0x0967e1707bd2719cbF152ebE62D1Af2962aC00A2](https://goerli-optimism.etherscan.io/address/0x0967e1707bd2719cbF152ebE62D1Af2962aC00A2) | [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) | Goerli Optimism |
